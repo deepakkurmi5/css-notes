@@ -1,0 +1,21 @@
+.para {
+  color: rgb(17, 16, 16);
+  font-size: 1.2rem;
+}
+
+p.para {
+  background-color: rgb(238, 238, 238);
+  color: black;
+}
+
+.spacious {
+  font-size: 1.05rem;
+}
+
+li.spacious {
+  color: lightblue;
+}
+
+li.spacious.elegant {
+  color: blueviolet;
+}
