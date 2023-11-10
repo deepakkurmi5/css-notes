@@ -1,3 +1,70 @@
-html {
-  font-size: 65.5%;
+::selection {
+  color: white;
+  background-color: red;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+a:visited {
+  background-color: red;
+}
+
+button:hover {
+  background-color: aquamarine;
+}
+
+button:focus {
+  color: red;
+  background-color: red;
+}
+
+button:active {
+  background-color: cornflowerblue;
+}
+
+.parent p:last-child {
+  color: red;
+}
+
+input:read-only {
+  color: red;
+}
+
+input:read-write {
+  color: gray;
+}
+
+input:required {
+  font-size: 32px;
+}
+
+:root {
+  background-color: grey;
+}
+
+.parent p:first-child::first-line {
+  color: yellow;
+}
+
+.parent p:first-child::first-letter {
+  color: red;
+}
+
+h3::before {
+  content: "okay";
+}
+
+h3::after {
+  content: "okay";
 }

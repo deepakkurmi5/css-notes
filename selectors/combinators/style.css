@@ -1,0 +1,22 @@
+div .para {
+  color: white;
+}
+
+.section > p {
+  background-color: blue;
+}
+
+h2 + ul {
+  background-color: brown;
+}
+
+.container ~ p {
+  color: blueviolet;
+}
+
+p,
+h1,
+.combinators,
+#content {
+  font-size: 20px;
+}

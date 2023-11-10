@@ -1,12 +1,7 @@
 #heading {
-  color: black;
-}
-
-#article_one {
-  border: 1px solid black;
-  padding: 15px;
+  color: red;
 }
 
 div#parent {
-  color: red;
+  background-color: yellow;
 }
