@@ -1,0 +1,19 @@
+/* .parent {
+  &:hover {
+    background-color: red;
+  }
+  .article {
+    background-color: yellow;
+  }
+} */
+
+.parent *:hover {
+  background-color: red;
+}
+
+.card {
+  .featured & {
+    color: rgb(165, 165, 165);
+    font-size: larger;
+  }
+}
