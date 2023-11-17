@@ -1,0 +1,12 @@
+body {
+  color: green;
+  background-color: rgba(23, 44, 100, 0.3);
+}
+
+p {
+  background-color: red;
+}
+
+span {
+  color: brown;
+}
