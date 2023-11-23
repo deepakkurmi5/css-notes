@@ -68,3 +68,7 @@ h3::before {
 h3::after {
   content: "okay";
 }
+
+:is(h3, a) {
+  color: red;
+}
