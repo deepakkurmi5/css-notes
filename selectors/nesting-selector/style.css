@@ -1,19 +1,15 @@
 .container {
+  &:hover {
+    background-color: red;
+  }
   & h3 {
     color: red;
   }
   .parent {
-    background-color: rgb(238, 238, 238);
-    .article {
-      & span {
-        color: blueviolet;
-      }
-    }
-  }
-  .card {
-    .featured {
-      .card1 {
-        background-color: bisque;
+    & article {
+      & label,
+      span {
+        color: blue;
       }
     }
   }

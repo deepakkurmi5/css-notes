@@ -1,17 +1,18 @@
 @import url("./component.css");
-
 body {
-  background-color: rgba(23, 44, 100, 0.3);
+    background-color: rgba(23, 44, 100, 0.3);
 }
 
 h2 {
-  color: red;
+    color: blue;
 }
 
 h2 {
-  color: blue;
+    color: red;
 }
 
+
+/* 
 :where(a.author) {
   color: red;
 }
@@ -28,7 +29,10 @@ h2 {
     text-decoration: overline;
     color: red;
   }
-}
+} */
+
 
 /* this does nothing */
-@layer page,site;
+
+
+/* @layer page,site; */

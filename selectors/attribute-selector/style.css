@@ -1,27 +1,27 @@
-/* li a[title] {
-  background-color: red;
+/* a[title] {
+  background-color: green;
 }
 
 a[title="flower"] {
-  color: green;
-}
-
-input[type="button"] {
-  background-color: yellow;
-}
-
-a[class~="flower"] {
-  background-color: rgb(181, 26, 77);
-}
-
-a[class|="top"] {
-  font-size: 2rem;
+  background-color: rgb(236, 0, 122);
 } */
 
-a[class^="top"] {
-  color: brown;
+/* a[class~="flower"] {
+  background-color: yellow;
+} */
+
+/* a[class|="link"] {
+  background-color: rgb(144, 0, 255);
+} */
+
+/* a[class^="top"] {
+  background-color: brown;
+} */
+
+a[class$="home"] {
+  background-color: red;
 }
 
-a[class*="tact"] {
-  background-color: red;
+a[class*="topho"] {
+  background-color: rgb(0, 255, 64);
 }

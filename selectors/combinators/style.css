@@ -1,22 +1,26 @@
 div .para {
-  color: rgb(181, 181, 181);
+    color: rgb(181, 181, 181);
 }
 
-.section > p {
-  background-color: blue;
+.section>p {
+    background-color: blue;
 }
 
-h2 + ul {
-  background-color: brown;
+h2+ul {
+    background-color: brown;
 }
 
-.container ~ p {
-  color: blueviolet;
+.container~p {
+    color: blueviolet;
 }
 
 p,
 h1,
 .combinators,
 #content {
-  font-size: 20px;
+    font-size: 20px;
+}
+
+h2~span {
+    font-size: 5rem;
 }

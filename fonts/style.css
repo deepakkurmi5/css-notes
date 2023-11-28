@@ -1,15 +1,30 @@
-body {
-  margin: 4% 10%;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap");
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../utils/fonts/Poppins-SemiBold.ttf") format("ttf");
 }
 
-h1,
-p,
-a {
-  font-family: Arial, Helvetica, sans-serif;
+body {
+  padding: 2rem 10rem;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  font-size-adjust: ex-height 0.5;
+  font-variant-position: sub;
 }
 
 p {
-  color: rgb(82, 82, 82);
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  font-family: "Poppins-SemiBold";
+  font-feature-settings: "smcp" on;
+  -webkit-font-feature-settings: "smcp" on;
+  -moz-font-feature-settings: "smcp" on;
 }

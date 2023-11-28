@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../../utils/fonts/Poppins-Regular.ttf");
+  font-weight: bold;
+}
+
+p,
+h1,
+a {
+  font-family: "Poppins-Regular";
+}
+
+p {
+  color: red;
+}
