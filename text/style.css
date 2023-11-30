@@ -1,0 +1,89 @@
+html {
+  font-size: 65.5%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-family: "Urbanist", sans-serif;
+  font-size: 2.2rem;
+}
+
+p,
+ul,
+span {
+  font-size: 1.5rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.container {
+  margin: 50px 100px;
+}
+
+.heading {
+  text-align: justify;
+  text-shadow: 3px 3px 5px rgb(196, 254, 255);
+}
+
+input[type="text"] {
+  margin-top: 2rem;
+  border-style: solid;
+  border-color: blueviolet;
+  direction: ltr;
+  text-align: left;
+  text-indent: 5px;
+}
+
+.code span {
+  vertical-align: super;
+}
+
+a {
+  text-decoration-line: underline;
+  text-decoration-color: blue;
+  text-decoration-thickness: 1px;
+  text-decoration-style: dashed;
+  -moz-text-decoration-line: underline;
+  -moz-text-decoration-color: blue;
+  -moz-text-decoration-style: dashed;
+}
+
+.para1 {
+  padding: 1rem;
+  white-space: pre-line;
+  border: 1px solid green;
+  border-radius: 10px;
+  line-break: anywhere;
+  text-size-adjust: 20%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.content p {
+  margin-top: 20px;
+  width: 150px;
+  border: 1px solid rgb(89, 47, 255);
+  /* overflow-wrap: break-word; */
+  word-break: break-word;
+}
+
+.para2 {
+  line-break: anywhere;
+}
+
+.tab {
+  border: 1px solid black;
+  background-color: red;
+}
