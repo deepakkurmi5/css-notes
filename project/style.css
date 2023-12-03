@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 65.5%;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  margin: 100px;
+  letter-spacing: 0.3px;
+  word-spacing: 0.3px;
+  line-height: 1.56;
+}
+
+h1 {
+  font-family: "Urbanist", sans-serif;
+}
+
+.card {
+  margin-top: 20px;
+  border: 1px solid rgb(227, 227, 227);
+  width: 20rem;
+  padding: 10px;
+  border-radius: 8px;
+  line-height: 2;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+
+  .card-img {
+    text-align: center;
+
+    & img {
+      width: auto;
+      height: 120px;
+      object-fit: contain;
+    }
+  }
+
+  .card-title {
+    text-align: center;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-btn {
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  .card-price {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}

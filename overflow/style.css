@@ -64,15 +64,21 @@ a {
 
 .para1 {
   padding: 1rem;
-  white-space: wrap;
   border: 1px solid blue;
   border-radius: 10px;
-  /* line-break: anywhere; */
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
   text-size-adjust: 100%;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+
+.para1:hover {
+  overflow-x: visible;
+  white-space: inherit;
 }
 
 .para1::first-letter {
@@ -84,11 +90,13 @@ a {
   font-size: 1.3rem;
   margin-top: 20px;
   width: 550px;
+  height: 50px;
   padding: 1rem;
   border: 1px solid rgb(89, 47, 255);
   /*overflow-wrap: break-word;*/
   word-break: break-word;
   border-radius: 5px;
+  overflow-x: hidden;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
