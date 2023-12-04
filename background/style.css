@@ -1,11 +1,28 @@
-body {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.one-img-container {
   width: 100%;
   height: 100vh;
-  background-color: hsl(0, 0%, 94%);
-  background-image: url("../images/img1.avif"), url("../images/img2.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  background: lightblue no-repeat top center;
+  background-image: url("../utils/images/img1.avif"),
+    url("../utils/images/img2.jpg");
   background-size: contain;
-  background-position: center;
-  background-blend-mode: difference;
+  border: 5px solid red;
+  padding: 20px;
+  background-clip: padding-box;
+  background-origin: border-box;
+  background-blend-mode: darken;
+}
+
+.two-img-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../utils/images/img1.avif"),
+    url("../utils/images/img2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
