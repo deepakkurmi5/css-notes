@@ -44,7 +44,7 @@
       rgba(255, 206, 183, 0.7),
       rgba(255, 255, 146, 0.7)
     ),
-    url("../utils/images/img1.avif");
+    url("../../utils/images/img1.avif");
   background-repeat: no-repeat;
   background-size: cover;
 }
