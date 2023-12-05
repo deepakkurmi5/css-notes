@@ -1,0 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(234, 234, 234);
+}
+
+.shadow-one {
+  margin: 100px 200px;
+  height: 200px;
+  width: 330px;
+  background-color: white;
+  border-radius: 10px;
+  /*box-shadow: 50px 50px 10px 50px red;*/
+  box-shadow: 2px 2px 8px 1px rgb(207, 207, 207);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
