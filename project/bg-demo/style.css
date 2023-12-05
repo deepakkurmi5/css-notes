@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 65.5%;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  letter-spacing: 0.3px;
+  word-spacing: 0.3px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: url("../../utils/images/bg.png") no-repeat scroll center;
+  background-size: cover;
+  line-height: 2;
+  text-align: center;
+  padding-top: 200px;
+}
+
+p,
+h1 {
+  color: white;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+button {
+  font-size: 1.8rem;
+  background: #d4ffff;
+  border-radius: 3.7rem;
+  padding: 1.4rem 3rem;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-border-radius: 3.7rem;
+  -moz-border-radius: 3.7rem;
+  -ms-border-radius: 3.7rem;
+  -o-border-radius: 3.7rem;
+}
