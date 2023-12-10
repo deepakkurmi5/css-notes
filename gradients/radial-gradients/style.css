@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.img-container {
+/* .img-container {
   width: 100%;
   height: 100vh;
   background-image: radial-gradient(red, green);
@@ -56,4 +56,42 @@
     purple 80%,
     gray 100%
   );
+} */
+
+.img-container {
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(rgb(135, 135, 131), red);
+}
+
+.one-img-container {
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(
+    circle,
+    rgb(238, 238, 238),
+    rgb(255, 228, 228)
+  );
+}
+
+.two-img-container {
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(
+    ellipse at top,
+    rgba(190, 223, 206, 0.5),
+    rgba(255, 190, 254, 0.5)
+  );
+}
+
+.three-img-container {
+  width: 100%;
+  height: 100vh;
+  background: repeating-radial-gradient(
+      ellipse at top,
+      rgba(190, 223, 206, 0.5),
+      rgba(255, 190, 254, 0.5) 600px
+    ),
+    url("../../utils/images/img2.jpg") no-repeat;
+  background-size: cover;
 }

@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 20px 40px;
+}
+
+.parent-div {
+  height: 500px;
+  width: 600px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    to right,
+    rgb(99, 99, 168),
+    rgb(171, 78, 78)
+  );
+  position: relative;
+  left: 300px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.child {
+  position: absolute;
+  height: 80px;
+  color: hsl(0, 0%, 100%);
+  width: 80px;
+  background: linear-gradient(to right, rgb(102, 188, 189), rgb(65, 156, 184));
+}
+
+.child:nth-child(2),
+.child:nth-child(4) {
+  background: linear-gradient(to right, rgb(27, 90, 91), rgb(36, 93, 111));
+}
+
+.child-2 {
+  top: 0;
+  right: 0;
+}
+
+.child-3 {
+  bottom: 0;
+  left: 0;
+}
+
+.child-4 {
+  bottom: 0;
+  right: 0;
+}
+
+.child-5 {
+  left: 260px;
+  top: 210px;
+}

@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 100px;
+}
+
+a {
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 40px;
+  background-color: white;
+  color: white;
+  box-shadow: 3px 3px 5px rgb(204, 204, 204);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  background-color: brown;
+  color: white;
+}
+
+a:active {
+  background-color: transparent;
+  color: black;
+}

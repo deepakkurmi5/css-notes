@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* background-color: black; */
 }
 
 .image {
@@ -10,7 +11,7 @@
   & img {
     height: 400px;
     width: auto;
-    filter: drop-shadow(3px 3px 5px rgb(255, 180, 180));
-    -webkit-filter: drop-shadow(3px 3px 5px rgb(255, 180, 180));
+    filter: drop-shadow(3px 3px 5px rgb(19, 19, 19));
+    -webkit-filter: drop-shadow(3px 3px 5px rgb(19, 19, 19));
   }
 }

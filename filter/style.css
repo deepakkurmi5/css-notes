@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.container {
+  margin: 100px auto;
+  height: auto;
+  width: 400px;
+}
+
+/* .container1 {
+  height: 100vh;
+  width: 100%;
+  padding: 300px 500px;
+  background: url("../utils/images/img1.avif") no-repeat;
+  background-size: cover;
+} */
+
+/* .box {
+  height: 170px;
+  width: 400px;
+  border-radius: 10px;
+  border: 2px solid rgb(221, 221, 221);
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+} */
+
+/* 
+
+.img1 {
+  height: 400px;
+  width: auto;
+  background-size: cover;
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%);
+}
+
+.img2 {
+  height: 400px;
+  width: auto;
+  background-size: cover;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+
+.img3 {
+  height: 400px;
+  width: auto;
+  background-size: cover;
+  filter: brightness(200%);
+  -webkit-filter: brightness(200%);
+}
+
+.img4 {
+  height: 400px;
+  width: auto;
+  background-size: cover;
+  filter: contrast(200%);
+  -webkit-filter: contrast(200%);
+}
+
+.img5 {
+  height: 400px;
+  width: auto;
+  background-size: cover;
+  filter: saturate(650%);
+  -webkit-filter: saturate(650%);
+} */
+
+/* .img1 {
+  width: auto;
+  height: 400px;
+  background-size: cover;
+  filter: saturate(120%);
+  -webkit-filter: saturate(120%);
+}
+ */
+.img2 {
+  width: auto;
+  height: 400px;
+  background-size: cover;
+  filter: drop-shadow(5px 5px 20px rgba(13, 13, 13, 0.8));
+  -webkit-filter: drop-shadow(5px 5px 20px rgba(13, 13, 13, 0.8));
+}
