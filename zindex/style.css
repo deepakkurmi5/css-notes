@@ -19,8 +19,6 @@ body {
     rgb(171, 78, 78)
   );
   position: relative;
-  left: 100px;
-  margin-left: 200px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
@@ -41,21 +39,5 @@ body {
 }
 
 .child-2 {
-  top: 0;
-  right: 0;
-}
-
-.child-3 {
-  bottom: 0;
-  left: 0;
-}
-
-.child-4 {
-  bottom: 0;
-  right: 0;
-}
-
-.child-5 {
-  left: 260px;
-  bottom: 210px;
+  z-index: 1;
 }

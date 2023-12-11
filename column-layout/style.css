@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-family: 600;
+  margin: 50px 100px;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  color: brown;
+  text-shadow: 2px 0px rgb(232, 166, 166);
+  column-span: all;
+}
+
+.para {
+  margin-top: 20px;
+  column-count: 5;
+  column-rule-color: brown;
+  column-rule-style: solid;
+  column-rule-width: 5px;
+  column-rule: 5px solid brown;
+  column-gap: 40px;
+  column-fill: balance;
+}
+
+.para1 {
+  margin-top: 100px;
+  column-count: 3;
+  column-width: 200px;
+  columns: 30px 5;
+  column-rule: 5px solid brown;
+}

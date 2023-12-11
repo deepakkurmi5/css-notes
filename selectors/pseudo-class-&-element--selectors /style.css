@@ -1,6 +1,6 @@
-::selection {
+/* ::selection {
   color: white;
-  background-color: red;
+  background-color: lightblue;
 }
 
 button {
@@ -71,4 +71,16 @@ h3::after {
 
 :is(h3, a) {
   color: red;
-}
+} */
+
+/* .list li:first-child {
+  color: red;
+} */
+
+/* .list li:nth-last-of-type(2) {
+  color: red;
+} */
+
+/* .list li:first-of-type {
+  color: red;
+} */
