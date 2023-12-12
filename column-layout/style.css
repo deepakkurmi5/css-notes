@@ -10,6 +10,15 @@ body {
   margin: 50px 100px;
 }
 
+.heading {
+  margin-bottom: 10px;
+}
+
+.heading,
+h1 {
+  font-family: "Inter", sans-serif;
+}
+
 h2 {
   font-family: "Inter", sans-serif;
   color: brown;
@@ -17,7 +26,7 @@ h2 {
   column-span: all;
 }
 
-.para {
+/* .para {
   margin-top: 20px;
   column-count: 5;
   column-rule-color: brown;
@@ -34,4 +43,26 @@ h2 {
   column-width: 200px;
   columns: 30px 5;
   column-rule: 5px solid brown;
+} */
+
+.para {
+  column-count: 3;
+  column-rule-style: solid;
+  column-rule-width: 5px;
+  column-rule-color: brown;
+  column-rule: 5px solid rgb(67, 42, 165);
+  column-gap: 50px;
+  column-fill: balance;
+}
+
+.para1 {
+  margin-top: 50px;
+  column-width: 400px;
+  column-rule: 5px solid rgb(67, 42, 165);
+  column-gap: 50px;
+}
+
+.para1-heading {
+  column-span: all;
+  margin-bottom: 20px;
 }

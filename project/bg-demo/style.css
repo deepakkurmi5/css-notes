@@ -19,9 +19,13 @@ body {
   height: 100vh;
   background: url("../../utils/images/bg.png") no-repeat scroll center;
   background-size: cover;
-  line-height: 2;
+  line-height: normal;
   text-align: center;
-  padding-top: 200px;
+  /* padding-top: 200px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 p,

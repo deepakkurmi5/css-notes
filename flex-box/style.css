@@ -6,5 +6,38 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  margin: 50px 100px;
+}
+
+.flex-container {
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.flex-container > div {
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  padding-top: 40px;
+}
+
+.flex-container > div:nth-child(even) {
+  background: linear-gradient(
+    to top left,
+    rgb(21, 119, 120),
+    rgb(86, 211, 202)
+  );
+}
+
+.flex-container > div:nth-child(odd) {
+  background: linear-gradient(to top left, rgb(31, 31, 120), rgb(65, 65, 173));
 }
