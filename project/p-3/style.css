@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  margin: 50px 100px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  line-height: 1.5;
+}
+
+.card {
+  width: 400px;
+  height: 500px;
+  padding: 0px;
+  box-shadow: 2px 2px 5px solid rgb(222, 222, 222);
+  background-color: red;
+
+  .card-img {
+    & img {
+      height: 229px;
+      width: auto;
+    }
+  }
+
+  .card-details {
+    padding: 10px;
+  }
+}
