@@ -5,6 +5,55 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  margin: 50px 100px;
+  font-family: "Urbanist", sans-serif;
+  font-family: 500;
+  padding: 100px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  background-color: aliceblue;
+}
+
+.grid-container {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  grid-auto-rows: 200px;
+  grid-auto-columns: 200px;
+  gap: 50px;
+  align-items: center;
+  justify-items: center;
+  /* grid-auto-flow: column dense; */
+}
+
+.grid-container .item {
+  color: white;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container .item:nth-child(even) {
+  background: linear-gradient(to left, red, blue);
+}
+.grid-container .item:nth-child(odd) {
+  background: linear-gradient(to left, rgb(101, 185, 140), blue);
+}
+
+.item-1 {
+  /* grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3; */
+
+  /* grid-row: 2 / 3;
+  grid-column: 2 / 3; */
+  /* grid-area: 2 / 2 / 3 / 3; */
+}
+
+.item-3 {
+  /* grid-row: 1/2;
+  grid-column: 2/4; */
 }
