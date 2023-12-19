@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  font-family: 500;
+  padding: 100px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  background-color: aliceblue;
+}
+
+.grid-container {
+  width: 1000px;
+  height: 500px;
+  padding: 50px;
+  background-color: rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 150px);
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: column;
+}
+
+.grid-container .item {
+  color: white;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  /* display: grid; */
+  /* justify-content: center;
+  align-content: center; */
+  /* align-items: center; */
+  /* align-items: center; */
+  /* justify-content: end; */
+}
+
+.grid-container .item:nth-child(even) {
+  background: linear-gradient(to left, red, blue);
+}
+
+.grid-container .item:nth-child(odd) {
+  background: linear-gradient(to left, rgb(101, 185, 140), blue);
+}
+
+.item-6 {
+  /* display: grid;
+  align-self: center;
+  justify-self: start; */
+}

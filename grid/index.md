@@ -21,6 +21,7 @@
 
 <img src="../utils/docs-img/grid-layout.png" height="400"/>
 
+
 ## CSS Grid Container Property
 
 * display
@@ -32,8 +33,16 @@
 * grid-auto-flow
 * column-gap
 * gap
+
+<!-- CSS Grid Alignment Property -->
+
+* justify-content
+* align-content
 * justify-items
 * align-items
+* justify-self
+* align-self
+
 
 ## CSS Grid Item Property
 
@@ -44,3 +53,27 @@
 * grid-row
 * grid-column
 * grid-area
+
+
+## CSS Grid Functions
+
+* repeat()
+* minmax()
+* min-content
+* max-content
+* auto-fit
+* auto-fill 
+
+## Topics Of Grid 
+
+- Defining a grid
+- Flexible grids with the fr unit
+- Gaps between tracks
+- Repeating track listings
+- Implicit and explicit grids
+- The minmax() function
+- As many columns as will fit
+- Line-based placement
+- Positioning with grid-template-areas
+- Nesting grids and subgrid
+- Grid frameworks
