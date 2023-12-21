@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: white;
+}
+
+.dark {
+  --bg: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  .system {
+    --bg: black;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 50px 100px;
+  background-color: var(--bg);
+}

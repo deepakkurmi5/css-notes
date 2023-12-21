@@ -5,6 +5,59 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 50px 100px;
+  font-size: 65.5%;
+}
+
+p {
+  margin-top: 20px;
+  color-scheme: dark;
+  color: red;
+}
+
+/* 
+@media (max-resolution: 172dpi) {
+  p {
+    text-decoration: underline;
+  }
+} */
+
+/* a:hover {
+  color: black;
+  background: yellow;
+}
+
+when hover is supported
+@media (hover: hover) {
+  a:hover {
+    color: white;
+    background: red;
+  }
+} */
+
+/* 
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    flex-direction: column;
+  }
+} */
+
+/* @media (hover: hover) {
+  p:hover {
+    color: red;
+  }
+}
+ */
+
+@media (prefers-color-scheme: normal) {
+  p {
+    color: red;
+  }
 }
