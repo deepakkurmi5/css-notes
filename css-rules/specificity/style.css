@@ -7,5 +7,5 @@ body {
 }
 
 p {
-  background-color: red;
+  background-color: red !important;
 }

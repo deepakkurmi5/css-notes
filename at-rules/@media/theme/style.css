@@ -12,6 +12,12 @@
   --bg: black;
 }
 
+@media (prefers-color-scheme: light) {
+  .system {
+    --bg: white;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .system {
     --bg: black;

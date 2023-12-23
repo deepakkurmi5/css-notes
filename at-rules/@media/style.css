@@ -55,9 +55,15 @@ when hover is supported
   }
 }
  */
-
+/* 
 @media (prefers-color-scheme: normal) {
   p {
     color: red;
   }
-}
+} */
+
+/* @media only screen and (hover: hover) {
+  p:hover {
+    background-color: red;
+  }
+} */

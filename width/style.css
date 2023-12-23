@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 10px 10px;
+}
+
+div {
+  width: 300px;
+  max-height: 300px;
+  overflow: scroll;
+  background-color: rgb(137, 93, 28);
+}

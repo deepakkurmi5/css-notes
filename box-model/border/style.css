@@ -28,11 +28,17 @@ span {
   height: 300px;
   width: 300px;
   background-color: rgb(207, 226, 243);
-  border: 20px solid transparent;
-  /* border-image-source: url("https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png"); */
+  border-radius: 20px 20px 20px 20px;
+  -webkit-border-radius: 20px 20px 20px 20px;
+  -moz-border-radius: 20px 20px 20px 20px;
+  -ms-border-radius: 20px 20px 20px 20px;
+  -o-border-radius: 20px 20px 20px 20px;
+}
+
+/* border: 20px solid transparent;
+  border-image-source: url("https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png");
   border-image-source: linear-gradient(to bottom, red, blue);
   border-image-slice: 40% 40%;
   border-image-width: 30px 20px;
   border-image-repeat: stretch;
-  border-image-outset: 20px;
-}
+  border-image-outset: 20px; */
