@@ -133,3 +133,19 @@ body {
     }
   }
 }
+
+@media (width <= 37.5em) {
+  body {
+    margin: 5px 5px;
+  }
+
+  .course-section {
+    padding: 5px;
+
+    .course-lists {
+      .course-list {
+        flex-grow: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  /* margin: 50px 100px; */
+}
+
+ul {
+  list-style-type: none;
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  & li {
+    display: inline;
+    float: left;
+
+    & a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration-line: none;
+      -moz-text-decoration-line: none;
+
+      &:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+
+      &.active {
+        background-color: #04aa6d;
+        color: white;
+      }
+    }
+  }
+}

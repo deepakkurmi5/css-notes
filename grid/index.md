@@ -25,20 +25,20 @@
 ## CSS Grid Container Property
 
 * display
+* grid-auto-flow
 * grid-template-columns
 * grid-template-rows
-* row-gap
 * grid-auto-columns
 * grid-auto-rows
-* grid-auto-flow
 * column-gap
+* row-gap
 * gap
 
 <!-- CSS Grid Alignment Property -->
 
 * justify-content
-* align-content
 * justify-items
+* align-content
 * align-items
 * justify-self
 * align-self
