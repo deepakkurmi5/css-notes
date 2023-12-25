@@ -40,9 +40,6 @@
 * justify-items
 * align-content
 * align-items
-* justify-self
-* align-self
-
 
 ## CSS Grid Item Property
 
@@ -50,10 +47,14 @@
 * grid-column-start
 * grid-row-end
 * grid-column-end
-* grid-row
-* grid-column
-* grid-area
+* grid-row (sort = start/end)
+* grid-column (sort = start/end)
+* grid-area (sort = row start/column start/ row end/ column end)
 
+<!-- CSS Grid Alignment Property -->
+
+* justify-self
+* align-self
 
 ## CSS Grid Functions
 
@@ -71,9 +72,9 @@
 - Gaps between tracks
 - Repeating track listings
 - Implicit and explicit grids
+- Line-based placement
 - The minmax() function
 - As many columns as will fit
-- Line-based placement
 - Positioning with grid-template-areas
 - Nesting grids and subgrid
 - Grid frameworks
