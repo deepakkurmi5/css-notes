@@ -46,3 +46,49 @@ Media Conditions describe properties of the viewport, not of the image. For exam
 * Responsive images will automatically adjust to fit the size of the screen.
 
 * Responsive image hints with sizes and srcset (see also the <picture> element and our Responsive images tutorial).
+
+
+**Tips and Tricks -**
+------------------------------
+
+1. If you want the image to scale both up and down on responsiveness, set the CSS width property to 100% and height to auto:
+
+ img {
+  width: 100%;
+  height: auto;
+} 
+
+2. If you want an image to scale down if it has to, but never scale up to be larger than its original size, use max-width: 100% 
+
+ img {
+  max-width: 100%;
+  height: auto;
+} 
+
+3. If you want to restrict a responsive image to a maximum size, use the max-width property, with a pixel value of your choice: 
+
+ img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+} 
+
+
+## CSS The object-fit Property
+
+The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.
+
+We see that the image is being squished to fit the container of 200x300 pixels (its original aspect ratio is destroyed).
+
+Here is where the object-fit property comes in. The object-fit property can take one of the following values:
+
+* fill - This is default. The image is resized to fill the given dimension. If necessary, the image will be stretched or squished to fit
+* contain - The image keeps its aspect ratio, but is resized to fit within the given dimension
+* cover - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit
+* none - The image is not resized
+* scale-down - the image is scaled down to the smallest version of none or contain
+
+## Using the object-position Property
+
+ The CSS object-position property is used to specify how an <img> or <video> should be positioned within its container.
+ 

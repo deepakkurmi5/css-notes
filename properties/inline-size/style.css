@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 50px 100px;
+}
+
+div {
+  max-inline-size: 100%;
+  block-size: auto;
+  background-color: rgb(107, 170, 207);
+  /* writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr; */
+}
