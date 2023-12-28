@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  margin: 50px 100px;
+}
+
+button {
+  padding: 20px 40px;
+  border: 5px solid rgb(220, 220, 220);
+  font-size: 22px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  /*transition-property: background-color, font-size;
+  transition-duration: 0.4s, 1s;
+  transition-timing-function: linear, ease-in-out;
+  transition-delay: 500ms, 1s;
+  */
+  /* transition: background-color 0.4s linear 500ms, font-size 1s ease-in-out 1s;
+  -webkit-transition: background-color 0.4s linear 500ms,
+    font-size 1s ease-in-out 1s;
+  -moz-transition: background-color 0.4s linear 500ms,
+    font-size 1s ease-in-out 1s;
+  -ms-transition: background-color 0.4s linear 500ms,
+    font-size 1s ease-in-out 1s;
+  -o-transition: background-color 0.4s linear 500ms, font-size 1s ease-in-out 1s; */
+
+  /* transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  transition-delay: 0ms;
+  width: 200px; */
+}
+
+button:hover {
+  /* width: 1000px; */
+  /* font-size: 25px; */
+}

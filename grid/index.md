@@ -59,7 +59,7 @@
 ## CSS Grid Functions
 
 * repeat()
-* minmax()
+* minmax( min, max)
 * min-content
 * max-content
 * auto-fit
