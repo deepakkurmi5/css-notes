@@ -6,38 +6,70 @@
 
 body {
   font-family: "Urbanist", sans-serif;
-  margin: 50px 100px;
+  margin: 50px 10px;
+  background-color: black;
 }
 
-button {
+/* button {
   padding: 20px 40px;
   border: 5px solid rgb(220, 220, 220);
   font-size: 22px;
   cursor: pointer;
   background-color: black;
   color: white;
-  /*transition-property: background-color, font-size;
+  transition-property: background-color, font-size;
   transition-duration: 0.4s, 1s;
   transition-timing-function: linear, ease-in-out;
   transition-delay: 500ms, 1s;
-  */
-  /* transition: background-color 0.4s linear 500ms, font-size 1s ease-in-out 1s;
-  -webkit-transition: background-color 0.4s linear 500ms,
-    font-size 1s ease-in-out 1s;
-  -moz-transition: background-color 0.4s linear 500ms,
-    font-size 1s ease-in-out 1s;
-  -ms-transition: background-color 0.4s linear 500ms,
-    font-size 1s ease-in-out 1s;
-  -o-transition: background-color 0.4s linear 500ms, font-size 1s ease-in-out 1s; */
-
-  /* transition-property: width;
+  transition: background-color 0.4s linear 500ms, font-size 1s ease-in-out 1s;
+  -webkit-transition: background-color 0.4s linear 500ms, font-size 1s ease-in-out 1s;
+  -moz-transition: background-color 0.4s linear 500ms, font-size 1s ease-in-out 1s;
+  -ms-transition: background-color 0.4s linear 500ms, font-size 1s ease-in-out 1s;
+  -o-transition: background-color 0.4s linear 500ms, font-size 1s ease-in-out 1s;
+  transition-property: width;
   transition-duration: 0.5s;
   transition-timing-function: ease-in;
   transition-delay: 0ms;
-  width: 200px; */
-}
+  width: 200px;
+} */
 
-button:hover {
-  /* width: 1000px; */
-  /* font-size: 25px; */
-}
+/* button:hover {
+  width: 1000px;
+} */
+
+/* 
+.ball-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  height: 100vh;
+
+  & div {
+    width: 70px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: blue;
+    cursor: pointer;
+    box-shadow: 4px 4px 15px rgb(94, 94, 229), -4px -4px 15px rgb(94, 94, 229);
+    transition: all 2s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+  }
+
+  & div:nth-child(1):hover {
+    transition-timing-function: ease;
+    translate: 90vw 0;
+  }
+
+  & div:nth-child(2):hover {
+    transition-timing-function: ease-in;
+    translate: 90vw 0;
+  }
+} */
