@@ -37,7 +37,6 @@ body {
   width: 1000px;
 } */
 
-/* 
 .ball-container {
   display: flex;
   flex-direction: column;
@@ -52,19 +51,19 @@ body {
     background-color: blue;
     cursor: pointer;
     box-shadow: 4px 4px 15px rgb(94, 94, 229), -4px -4px 15px rgb(94, 94, 229);
-    transition: all 2s;
+    transition: all 3s;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    -webkit-transition: all 2s;
-    -moz-transition: all 2s;
-    -ms-transition: all 2s;
-    -o-transition: all 2s;
+    -webkit-transition: all 3s;
+    -moz-transition: all 3s;
+    -ms-transition: all 3s;
+    -o-transition: all 3s;
   }
 
   & div:nth-child(1):hover {
-    transition-timing-function: ease;
+    transition-timing-function: ease-in-out;
     translate: 90vw 0;
   }
 
@@ -72,4 +71,4 @@ body {
     transition-timing-function: ease-in;
     translate: 90vw 0;
   }
-} */
+}

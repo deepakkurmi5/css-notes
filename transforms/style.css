@@ -98,7 +98,7 @@ body {
   align-items: center;
   margin: 100px 0 0 100px;
   perspective: 800px;
-  perspective-origin: bottom;
+  perspective-origin: top right;
 
   .box {
     width: 300px;
@@ -108,11 +108,12 @@ body {
     align-items: center;
     background-color: rgb(148, 55, 8);
     transition: all 1s linear;
-    transform: rotateY(45deg);
-    -webkit-transform: rotateY(45deg);
-    -moz-transform: rotateY(45deg);
-    -ms-transform: rotateY(45deg);
-    -o-transform: rotateY(45deg);
+    transform: rotate(20deg);
+    transform-origin: right top;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
     -webkit-transition: all 1s linear;
     -moz-transition: all 1s linear;
     -ms-transition: all 1s linear;
