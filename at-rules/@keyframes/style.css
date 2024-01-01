@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 50px 100px;
+}
+
+.animation {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  animation-name: animate;
+  animation-duration: 4s;
+}
+
+@keyframes animate {
+  from {
+    background-color: red;
+  }
+
+  to {
+    background-color: teal;
+  }
+}
