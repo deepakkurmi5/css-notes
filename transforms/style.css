@@ -97,8 +97,9 @@ body {
   justify-content: center;
   align-items: center;
   margin: 100px 0 0 100px;
-  perspective: 800px;
-  perspective-origin: top right;
+  /* transform-style: preserve-3d; */
+  perspective: 500px;
+  perspective-origin: left bottom;
 
   .box {
     width: 300px;
@@ -107,16 +108,18 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(148, 55, 8);
-    transition: all 1s linear;
-    transform: rotate(20deg);
-    transform-origin: right top;
-    -webkit-transform: rotate(-20deg);
-    -moz-transform: rotate(20deg);
-    -ms-transform: rotate(20deg);
-    -o-transform: rotate(20deg);
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -ms-transition: all 1s linear;
-    -o-transition: all 1s linear;
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function: linear;
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+
+    &:hover {
+      transform: rotateY(50deg);
+      -webkit-transform: rotateY(50deg);
+      -moz-transform: rotateY(50deg);
+      -ms-transform: rotateY(50deg);
+      -o-transform: rotateY(50deg);
+    }
   }
 }

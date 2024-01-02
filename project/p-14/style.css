@@ -76,25 +76,29 @@ h3 {
       font-size: 1.6rem;
       border: none;
       margin-top: 10px;
+      cursor: pointer;
       outline: none;
       color: white;
       font-weight: 700;
       background-color: #1db1c5;
       border-radius: 8px;
       font-family: "Quicksand", sans-serif;
-      transition: background-color 0.5s ease, padding 0.5s ease-in;
+      transition-property: background-color;
+      transition-duration: 1s;
+      transition-timing-function: ease-in;
+
+      /* transition: background-color 0.5s ease, padding 0.5s ease-in; */
       -webkit-border-radius: 8px;
       -moz-border-radius: 8px;
       -ms-border-radius: 8px;
       -o-border-radius: 8px;
-      -webkit-transition: background-color 0.5s ease, padding 0.5s ease-in;
+      /* -webkit-transition: background-color 0.5s ease, padding 0.5s ease-in;
       -moz-transition: background-color 0.5s ease, padding 0.5s ease-in;
       -ms-transition: background-color 0.5s ease, padding 0.5s ease-in;
-      -o-transition: background-color 0.5s ease, padding 0.5s ease-in;
+      -o-transition: background-color 0.5s ease, padding 0.5s ease-in; */
 
       &:hover {
         background-color: #0e555e;
-        padding: 23px 60px;
       }
     }
   }
@@ -180,6 +184,10 @@ h3 {
       & p {
         text-align: center;
       }
+    }
+
+    & .coffie-img {
+      grid-area: 1/1/2/2;
     }
   }
 
