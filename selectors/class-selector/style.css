@@ -1,9 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 100px;
+}
+
 .heading {
-  color: black;
+  font-size: 50px;
+  color: rgb(141, 69, 30);
 }
 
 .para {
   font-size: 20px;
+  color: rgb(141, 69, 30);
+}
+
+:where(.heading, .para) {
+  color: blue;
 }
 
 /* 
@@ -15,10 +31,32 @@
     font-size: larger;
 } */
 
-li.spacious {
+/* li.spacious {
   color: red;
 }
 
 li.elegant.spacious {
   color: brown;
+} */
+
+ul li {
+  display: inline-block;
+  border: 1px solid red;
+}
+
+ul :not(li:first-child) {
+  padding-left: 50px;
+}
+
+.parent:has([type="checkbox"]:checked) label {
+  color: red;
+}
+
+h1,
+h2 {
+  margin: 0 0 1rem 0;
+}
+
+h1:has(+ h2) {
+  margin: 0 0 0.25rem 0;
 }

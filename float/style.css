@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  width: 100vh;
+  margin: 0 auto;
+
+  .container {
+    height: 10vh;
+  }
+
+  & .brand-logo {
+    width: 30%;
+    line-height: 10vh;
+    background-color: antiquewhite;
+    color: white;
+    float: left;
+    padding: 0 20px;
+  }
+
+  & .navbar {
+    width: 70%;
+    background-color: blanchedalmond;
+    float: right;
+    line-height: 10vh;
+    padding: 0 20px;
+
+    & ul {
+      text-align: right;
+      list-style-type: none;
+
+      & li {
+        padding: 0 10px;
+
+        display: inline-block;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
