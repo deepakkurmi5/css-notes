@@ -40,8 +40,14 @@
 * justify-items
 * align-content
 * align-items
+* place-items - The place-items property is used in grid layout, and is a shorthand property for the 
+  following properties:
+  
+ - align-items
+ - justify-items
 
 ## CSS Grid Item Property
+
 
 * grid-row-start
 * grid-column-start
