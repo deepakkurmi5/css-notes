@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.universe {
+  width: 25vw;
+  aspect-ratio: 1;
+  background-color: #ffbb5c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: skychange 10s ease-in-out infinite;
+  -webkit-animation: skychange 10s ease-in-out infinite;
+}
+
+@keyframes skychange {
+  0% {
+    background-color: #ffbb5cb5;
+  }
+  25% {
+    background-color: #fcbf49;
+  }
+  50% {
+    background-color: #000000;
+  }
+  75% {
+    background-color: #fcbf49;
+  }
+  100% {
+    background-color: #ffbb5cb5;
+  }
+}
+
+.sun {
+  position: relative;
+  width: 14vw;
+  aspect-ratio: 1;
+  background-color: #e25e3e;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    aspect-ratio: 1;
+    background-color: black;
+    border-radius: inherit;
+    animation: ani-moon 10s ease-in-out infinite;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -ms-border-radius: inherit;
+    -o-border-radius: inherit;
+    -webkit-animation: ani-moon 10s ease-in-out infinite;
+  }
+}
+
+@keyframes ani-moon {
+  0% {
+    translate: 100%;
+    scale: 1;
+  }
+
+  50% {
+    translate: 0%;
+    scale: 0.95;
+  }
+
+  100% {
+    translate: -100%;
+    scale: 0.95;
+  }
+}
