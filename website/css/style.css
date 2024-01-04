@@ -1,0 +1,80 @@
+@import url("./theme.css");
+
+/* ==========================================================
+Base Rules
+========================================================== */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+html {
+  font-size: 65.5%; /* 1rem = 10px  */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+p,
+a,
+li {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: var(--para-color);
+  font-size: 1.5rem;
+}
+
+table {
+  width: 100%;
+}
+
+/* ==========================================================
+Layout Rules
+========================================================== */
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 9.4rem 2.4rem;
+}
+
+/* ==========================================================
+Navbar Section
+========================================================== */
+
+.navbar__section {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.navbar__section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 0;
+}
+
+.navbar__section .navbar ul {
+  display: flex;
+  gap: 3rem;
+  text-transform: capitalize;
+}

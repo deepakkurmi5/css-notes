@@ -97,9 +97,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 100px 0 0 100px;
-  /* transform-style: preserve-3d; */
-  perspective: 500px;
-  perspective-origin: left bottom;
+  perspective-origin: center;
 
   .box {
     width: 300px;
@@ -111,15 +109,11 @@ body {
     transition-property: transform;
     transition-duration: 0.4s;
     transition-timing-function: linear;
-    backface-visibility: visible;
-    -webkit-backface-visibility: visible;
+    transform-origin: center;
 
     &:hover {
-      transform: rotateY(50deg);
-      -webkit-transform: rotateY(50deg);
-      -moz-transform: rotateY(50deg);
-      -ms-transform: rotateY(50deg);
-      -o-transform: rotateY(50deg);
+      transform: rotate3d(1, 1, 1, 30deg)
+        matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
     }
   }
 }

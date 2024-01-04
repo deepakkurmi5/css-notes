@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: aliceblue;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======================================
+(1) Example
+======================================  */
+
+/* h1 {
+  text-transform: uppercase;
+  text-shadow: 0 3px 4px rgb(175, 170, 170);
+  text-align: center;
+}
+
+h1::before {
+  content: "Hi";
+  display: block;
+}
+
+h1::after {
+  content: "Developer";
+  display: block;
+} */
+
+/* ======================================
+(2) Example
+======================================  */
+
+/* h1 {
+  text-transform: uppercase;
+  text-shadow: 0 3px 4px rgb(175, 170, 170);
+  text-align: center;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  translate: -50%;
+  width: 10vw;
+  border-bottom: 8px solid rgb(196, 196, 196);
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 10vw;
+  translate: -50%;
+  border-bottom: 8px solid rgb(196, 196, 196);
+} */
+
+/* ======================================
+(3) Example
+======================================  */
+
+/* h1 {
+  text-transform: uppercase;
+  text-shadow: 0 3px 4px rgb(175, 170, 170);
+  text-align: center;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  translate: -50%;
+  width: 10vw;
+  border-bottom: 8px solid rgb(196, 196, 196);
+}
+
+h1::after {
+  content: url("https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D");
+  position: absolute;
+  bottom: -250px;
+  left: 50%;
+  width: 10vw;
+  translate: -50%;
+  display: flex;
+  justify-content: center;
+} */
+
+/* ======================================
+(4) Example
+======================================  */
+
+h1 {
+  text-transform: uppercase;
+  text-shadow: 0 3px 4px rgb(175, 170, 170);
+  text-align: center;
+  position: relative;
+}
+
+h1::after {
+  content: "\f005";
+  font-size: 2rem;
+  width: 20vw;
+  height: 15px;
+  color: #1abc9c;
+  font-family: "Font Awesome 6 Pro";
+  font-style: normal;
+  font-variant: normal;
+  display: block;
+  margin: 0 auto;
+  border-bottom: 5px solid #9498db;
+}
+
+/* ======================================
+(5) Example
+======================================  */
+/* 
+.Box {
+  width: 20vw;
+  aspect-ratio: 1;
+  background-color: rgb(241, 241, 241);
+  border-radius: 50%;
+  position: relative;
+  border: 0.5px solid rgb(203, 203, 203);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.Box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5vw;
+  aspect-ratio: 1;
+  border-radius: inherit;
+  background-color: rgb(180, 199, 215);
+  transform: scale(0.9);
+  border: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.Box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2vw;
+  aspect-ratio: 1;
+  border-radius: inherit;
+  background-color: rgb(114, 16, 87);
+  transform: scale(0.9);
+  border: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+} */
+
+/* ======================================
+(6) Example
+======================================  */
+
+/* .Box {
+  width: 15vw;
+  aspect-ratio: 1;
+  background-color: red;
+  position: relative;
+  transform: rotate(42deg);
+  -webkit-transform: rotate(42deg);
+  -moz-transform: rotate(42deg);
+  -ms-transform: rotate(42deg);
+  -o-transform: rotate(42deg);
+}
+
+.Box::before {
+  content: "";
+  position: absolute;
+  background-color: red;
+  width: 15vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translateY(-115px);
+  -webkit-transform: translateY(-115px);
+  -moz-transform: translateY(-115px);
+  -ms-transform: translateY(-115px);
+  -o-transform: translateY(-115px);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.Box::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  width: 15vw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translateX(-120px);
+  -webkit-transform: translateX(-120px);
+  -moz-transform: translateX(-120px);
+  -ms-transform: translateX(-120px);
+  -o-transform: translateX(-120px);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+} */
