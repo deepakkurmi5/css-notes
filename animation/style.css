@@ -6,53 +6,25 @@
 
 body {
   font-family: "Inter", sans-serif;
-  margin: 40px 10px;
+  margin: 200px;
 }
 
-.ball {
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
-  background-color: blue;
-  border: 5px solid black;
-  /*animation-name: left-to-right;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  animation-delay: 300ms;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
-  */
-  animation: left-to-right 2s linear 200ms infinite alternate both running;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  -webkit-animation: left-to-right 2s linear 200ms infinite alternate both
-    running;
+.box {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  translate: 0vw 0;
+  animation: side 3s ease 0ms 3 alternate forwards running;
+  animation-composition: add;
+  -webkit-animation: side 3s ease 0ms 3 alternate forwards running;
 }
 
-/* @keyframes left-to-right {
-  from {
-    translate: 0px;
-  }
-
-  to {
-    translate: 0px 100px;
-  }
-} */
-
-@keyframes left-to-right {
+@keyframes side {
   0% {
-    translate: 0%;
-  }
-
-  50% {
-    translate: 50vw 50vh;
+    translate: 0vw 0;
   }
 
   100% {
-    translate: calc(90vw - 140px) 0;
+    translate: 60vw 0;
   }
 }

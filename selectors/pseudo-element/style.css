@@ -1,5 +1,5 @@
-/* ::selection {
-  color: white;
+::selection {
+  /* color: white; */
   background-color: lightblue;
 }
 
@@ -7,4 +7,8 @@ p::first-letter {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2rem;
-} */
+}
+
+p::first-line {
+  background-color: red;
+}

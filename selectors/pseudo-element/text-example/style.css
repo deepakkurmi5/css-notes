@@ -17,8 +17,8 @@ body {
 /* ======================================
 (1) Example
 ======================================  */
-
-/* h1 {
+/* 
+h1 {
   text-transform: uppercase;
   text-shadow: 0 3px 4px rgb(175, 170, 170);
   text-align: center;
@@ -30,7 +30,7 @@ h1::before {
 }
 
 h1::after {
-  content: "Developer";
+  content: "okay";
   display: block;
 } */
 
@@ -48,21 +48,21 @@ h1::after {
 h1::before {
   content: "";
   position: absolute;
-  top: -20px;
+  top: -10px;
   left: 50%;
-  translate: -50%;
-  width: 10vw;
-  border-bottom: 8px solid rgb(196, 196, 196);
+  translate: -50% 0;
+  width: 70%;
+  border-bottom: 6px solid rgb(54, 54, 54);
 }
 
 h1::after {
   content: "";
   position: absolute;
-  bottom: -20px;
-  left: 50%;
-  width: 10vw;
-  translate: -50%;
-  border-bottom: 8px solid rgb(196, 196, 196);
+  bottom: -10px;
+  width: 70%;
+  right: 50%;
+  translate: 50% 0;
+  border-bottom: 6px solid gray;
 } */
 
 /* ======================================
@@ -89,19 +89,18 @@ h1::before {
 h1::after {
   content: url("https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D");
   position: absolute;
+  width: auto;
+  background-color: cadetblue;
   bottom: -250px;
-  left: 50%;
-  width: 10vw;
-  translate: -50%;
-  display: flex;
-  justify-content: center;
+  right: 50%;
+  translate: 50% 0;
 } */
 
 /* ======================================
 (4) Example
 ======================================  */
 
-h1 {
+/* h1 {
   text-transform: uppercase;
   text-shadow: 0 3px 4px rgb(175, 170, 170);
   text-align: center;
@@ -109,18 +108,15 @@ h1 {
 }
 
 h1::after {
-  content: "\f005";
+  content: "\f13b";
   font-size: 2rem;
+  height: 20px;
   width: 20vw;
-  height: 15px;
   color: #1abc9c;
-  font-family: "Font Awesome 6 Pro";
-  font-style: normal;
-  font-variant: normal;
+  font-family: "Font Awesome 6 Brands";
   display: block;
-  margin: 0 auto;
   border-bottom: 5px solid #9498db;
-}
+} */
 
 /* ======================================
 (5) Example
@@ -149,7 +145,6 @@ h1::after {
   aspect-ratio: 1;
   border-radius: inherit;
   background-color: rgb(180, 199, 215);
-  transform: scale(0.9);
   border: inherit;
   -webkit-border-radius: inherit;
   -moz-border-radius: inherit;

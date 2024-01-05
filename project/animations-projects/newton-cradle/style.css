@@ -54,14 +54,14 @@ body {
 
 .cradle div:first-child {
   transform-origin: left top;
-  animation: left-swing 2s linear infinite;
-  -webkit-animation: left-swing 2s linear infinite;
+  /* animation: left-swing 2s linear infinite;
+  -webkit-animation: left-swing 2s linear infinite; */
 }
 
 .cradle div:last-child {
   transform-origin: right top;
-  animation: right-swing 2s linear 1s infinite;
-  -webkit-animation: right-swing 2s linear 1s infinite;
+  /* animation: right-swing 2s linear 1s infinite;
+  -webkit-animation: right-swing 2s linear 1s infinite; */
 }
 
 @keyframes left-swing {

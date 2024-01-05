@@ -13,7 +13,7 @@ Theme Rules
   --white-color: #ffffff;
   --hero-heading-color: #003b99;
   --btn-hover-bg-color: #003b99;
-  --btn-box-shadow: rgba(100, 1000, 111, 0.2) 0px 7px 29px 0px;
+  --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 /* ==========================================================
@@ -75,7 +75,7 @@ Layout Rules
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 9.4rem 2.4rem;
+  padding: 6rem 2.4rem;
 }
 
 .grid {
@@ -84,6 +84,14 @@ Layout Rules
 
 .grid-two--cols {
   grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three--cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four--cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* ==========================================================
@@ -112,6 +120,11 @@ Module / Reusable Rules
   color: var(--heading-color);
 }
 
+.section-common--title {
+  font-size: 1.7rem;
+  margin: 3rem 0 1.5rem 0;
+}
+
 /* ==========================================================
 States Rules
 ========================================================== */
@@ -120,6 +133,19 @@ States Rules
   background-color: var(--btn-hover-bg-color);
   cursor: pointer;
   box-shadow: var(--btn-box-shadow);
+}
+
+.fa-brands,
+.fa-solid {
+  padding: 2rem;
+  font-size: 3rem;
+  color: var(--hero-heading-color);
+  background-color: var(--supporting-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 /* ==========================================================
@@ -250,3 +276,70 @@ main {
 /* ==========================================================
 About Section
 ========================================================== */
+
+.about-section {
+  .grid {
+    gap: 20px;
+  }
+
+  & .about-card {
+    text-align: center;
+    border-radius: 8px;
+    padding: 2rem;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+
+    & img {
+      width: 10rem;
+      height: auto;
+      padding: 2rem;
+      background-color: var(--supporting-color);
+      border-radius: 50%;
+      transition: rotate 0.5s linear;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      -webkit-transition: rotate 0.5s linear;
+      -moz-transition: rotate 0.5s linear;
+      -ms-transition: rotate 0.5s linear;
+      -o-transition: rotate 0.5s linear;
+
+      &:hover {
+        cursor: pointer;
+        rotate: 360deg;
+        background: linear-gradient(to right, #0575e6, #021b79);
+      }
+    }
+  }
+}
+
+/* ==========================================================
+Course Section
+========================================================== */
+
+.course-section .grid {
+  gap: 4rem;
+}
+
+.course-section .course-card {
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+.course-section .course-card:hover {
+  cursor: pointer;
+  box-shadow: var(--btn-box-shadow);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

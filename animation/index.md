@@ -3,7 +3,6 @@ https://www.w3schools.com/css/css3_animations.asp
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations
 https://developer.mozilla.org/en-US/docs/Web/CSS/animation
 
-
 ## What are CSS Animations?
 
 * An animation lets an element gradually(slowly slowly) change from one style to another.
@@ -27,7 +26,7 @@ The @keyframes CSS at-rule controls the intermediate steps in a CSS animation se
   from {
     transform: translateX(0%);
   }
-
+  
   to {
     transform: translateX(100%);
   }
@@ -57,10 +56,6 @@ An ending offset of 100%.
 
 * animation-direction - *Determines whether the animation runs forwards, backward, backward, or alternaes beetween forward and backward cycles.*
 
-* animation - shorthand
-
-* animation-composition
-
 * animation-fill-mode - 
 
 /*CSS animations do not affect an element before the first keyframe is played or after the last keyframe is played. The animation-fill-mode property can override this behavior./*
@@ -80,5 +75,7 @@ The animation-fill-mode property can have the following values:
 
 * animation-play-state - *The animation-play-state CSS property sets whether an animation is running or paused.*
 
-* animation-timeline
+* animation - shorthand
 
+<!-- * animation-timeline -->
+<!-- * animation-composition -->
