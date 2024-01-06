@@ -75,7 +75,7 @@ Layout Rules
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 6rem 2.4rem;
+  padding: 5rem 2.4rem;
 }
 
 .grid {
@@ -320,26 +320,132 @@ About Section
 Course Section
 ========================================================== */
 
-.course-section .grid {
-  gap: 4rem;
+.course-section {
+  &.grid {
+    gap: 4rem;
+  }
+
+  & .course-card {
+    text-align: center;
+    padding: 2rem;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: var(--btn-box-shadow);
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+  }
 }
 
-.course-section .course-card {
-  text-align: center;
-  padding: 2rem;
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
+/* ==========================================================
+Why Choose Section
+========================================================== */
+
+.why-choose--section {
+  & .grid {
+    gap: 5rem;
+  }
+
+  & .why-choose--card {
+    margin-top: 4rem;
+  }
+
+  & .text-align--right .why-choose--card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    text-align: right;
+  }
+
+  & .why-choose--center,
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    & img {
+      max-width: 70%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .why-choose--center figure::before,
+  .why-choose--center figure::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 25vw;
+    aspect-ratio: 1;
+    z-index: -1;
+    translate: -50% -50%;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  .why-choose--center figure::before {
+    animation: circle 5s linear infinite;
+    -webkit-animation: circle 5s linear infinite alternate;
+  }
+
+  .why-choose--center figure::after {
+    width: 27vw;
+    appearance: 1;
+    border: 0.3rem solid var(--supporting-color);
+    z-index: -2;
+    background-color: transparent;
+  }
 }
 
-.course-section .course-card:hover {
-  cursor: pointer;
-  box-shadow: var(--btn-box-shadow);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+@keyframes circle {
+  0% {
+    background-color: #b3d0ff;
+  }
+  25% {
+    background-color: #80b1ff;
+  }
+  50% {
+    background-color: #4d91ff;
+  }
+  75% {
+    background-color: #99c0ff;
+  }
+  100% {
+    background-color: #3381ff;
+  }
+}
+
+.common-text--highlight {
+  width: 5rem;
+  aspect-ratio: 1;
+  background-color: var(--supporting-color);
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
