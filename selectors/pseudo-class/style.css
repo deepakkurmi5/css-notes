@@ -84,3 +84,15 @@ h3::after {
 /* .list li:first-of-type {
   color: red;
 } */
+
+/* ul p:nth-last-of-type(2) {
+  color: red;
+} */
+
+/* ul li:only-child {
+  color: red;
+} */
+
+/* ul :not(li:first-child) {
+  color: red;
+} */

@@ -24,3 +24,5 @@
  - The :not() pseudo-class allows you to select elements that do not match tha selector.
 
   - It's commonly used to exclude specific elements from being styled.
+
+

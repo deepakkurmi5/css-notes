@@ -11,7 +11,7 @@ body {
   place-items: center;
   background-color: #191825;
 }
-
+/* 
 .loader {
   position: relative;
   width: 8rem;
@@ -23,7 +23,7 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  -webkit-animation: loading 1s linear infinite;
+  -webkit-animation: loading 2s linear infinite;
 }
 
 .loader::after {
@@ -62,5 +62,59 @@ body {
 
   to {
     rotate: -360deg;
+  }
+} */
+
+.loader {
+  position: relative;
+  width: 8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #865dff;
+  animation: moon 1s linear infinite reverse;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-animation: moon 1s linear infinite reverse;
+}
+
+.loader::before {
+  content: "";
+  width: 7rem;
+  aspect-ratio: 1;
+  border-radius: inherit;
+  position: absolute;
+  background-color: #191825;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  right: 40px;
+  width: 2.2rem;
+  aspect-ratio: 1;
+  border-radius: inherit;
+  background-color: #865dff;
+  box-shadow: 0 0 1rem #865dff, 0 0 1.5rem #865dff, 0 0 2rem #865dff, 0 0 2.5rem,
+    0 0 3rem #865dff;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+@keyframes moon {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
   }
 }

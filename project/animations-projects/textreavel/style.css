@@ -12,7 +12,7 @@ body {
   background-color: #191825;
 }
 
-h1 {
+/* h1 {
   position: relative;
   font-size: 80px;
   text-align: center;
@@ -37,6 +37,37 @@ h1::before {
 
 @keyframes textreavel {
   100% {
+    width: 100%;
+  }
+} */
+
+h1 {
+  position: relative;
+  font-size: 80px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: -1px 2px 3px rgba(236, 247, 7.6, 0.2);
+}
+
+h1::before {
+  content: "Loading...";
+  position: absolute;
+  color: #e9b824;
+  width: 100%;
+  overflow: hidden;
+  border-right: 2px solid #e9b824;
+  animation: sideInOut 1s linear infinite alternate;
+  animation-fill-mode: both;
+  -webkit-animation: sideInOut 1s linear infinite alternate;
+}
+
+@keyframes sideInOut {
+  from {
+    width: 0%;
+  }
+  to {
     width: 100%;
   }
 }

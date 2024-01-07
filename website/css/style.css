@@ -6,11 +6,12 @@ Theme Rules
   --main-color: #0062ff;
   --supporting-color: #ebf3fe;
   --font-color: #424242;
-  --bg-color: #ffffff;
+  --bg-color: #f7fcff;
   --heading-color: #000a19;
   --para-color: #504e4d;
   --test: #070101;
   --white-color: #ffffff;
+  --footer-bg-color: #040d12;
   --hero-heading-color: #003b99;
   --btn-hover-bg-color: #003b99;
   --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -50,7 +51,8 @@ li {
 
 p,
 a,
-li {
+li,
+label {
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   letter-spacing: 0.1rem;
@@ -75,7 +77,19 @@ Layout Rules
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 5rem 2.4rem;
+  padding: 8rem 2.4rem;
+}
+
+:is(
+    .about-section,
+    .course-section,
+    .why-choose--section,
+    .contact-home--section,
+    .blog-section,
+    .contact-section
+  )
+  .container:first-child {
+  padding: 3.4rem 2.4rem;
 }
 
 .grid {
@@ -118,21 +132,29 @@ Module / Reusable Rules
 
 .section-common--subheading {
   color: var(--heading-color);
+  margin: 1rem 0 0 0;
 }
 
 .section-common--title {
   font-size: 1.7rem;
-  margin: 3rem 0 1.5rem 0;
+  margin: 2rem 0 1rem 0;
 }
 
-/* ==========================================================
-States Rules
-========================================================== */
-
-.btn:hover {
-  background-color: var(--btn-hover-bg-color);
-  cursor: pointer;
-  box-shadow: var(--btn-box-shadow);
+.common-text--highlight {
+  width: 5rem;
+  aspect-ratio: 1;
+  background-color: var(--supporting-color);
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .fa-brands,
@@ -146,6 +168,16 @@ States Rules
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+}
+
+/* ==========================================================
+States Rules
+========================================================== */
+
+.btn:hover {
+  background-color: var(--btn-hover-bg-color);
+  cursor: pointer;
+  box-shadow: var(--btn-box-shadow);
 }
 
 /* ==========================================================
@@ -321,6 +353,8 @@ Course Section
 ========================================================== */
 
 .course-section {
+  background-color: var(--bg-color);
+
   &.grid {
     gap: 4rem;
   }
@@ -389,7 +423,7 @@ Why Choose Section
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 25vw;
+    width: 30rem;
     aspect-ratio: 1;
     z-index: -1;
     translate: -50% -50%;
@@ -407,7 +441,7 @@ Why Choose Section
   }
 
   .why-choose--center figure::after {
-    width: 27vw;
+    width: 35rem;
     appearance: 1;
     border: 0.3rem solid var(--supporting-color);
     z-index: -2;
@@ -433,19 +467,205 @@ Why Choose Section
   }
 }
 
-.common-text--highlight {
-  width: 5rem;
-  aspect-ratio: 1;
-  background-color: var(--supporting-color);
-  color: var(--main-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
+/* ==========================================================
+contact Home Section
+========================================================== */
+
+.contact-home--section {
+  width: 85%;
+  height: auto;
+  margin: 3rem auto;
+  padding: 2rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+
+  .grid {
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-content {
+    & .contact-title {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+
+    & p {
+      margin: 1.2rem 0 2.4rem 0;
+    }
+
+    .fa-solid {
+      padding: 0;
+      background-color: var(--main-color);
+      color: var(--white-color);
+      font-size: 2rem;
+    }
+
+    a {
+      color: var(--white-color);
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+    }
+  }
+
+  & .contact-image img {
+    max-width: 80%;
+    height: autos;
+  }
+}
+
+/* ==========================================================
+Blog  Section
+========================================================== */
+
+.blog-section {
+  background-color: var(--bg-color);
+
+  & .grid {
+    gap: 3rem;
+  }
+
+  & .blog-card {
+    border-radius: 8px;
+    box-shadow: var(--btn-box-shadow);
+    transition: scale 0.3s linear;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -webkit-transition: scale 0.3s linear;
+    -moz-transition: scale 0.3s linear;
+    -ms-transition: scale 0.3s linear;
+    -o-transition: scale 0.3s linear;
+
+    & .blog-content {
+      padding: 1rem 2rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      scale: 1.1;
+    }
+  }
+
+  & img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+
+  & .blog-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  & .fa-solid {
+    background-color: transparent;
+    font-size: 1.4rem;
+    padding: 0;
+  }
+}
+
+/* ==========================================================
+Contact Section
+========================================================== */
+
+.contact-section {
+  .grid {
+    gap: 3rem;
+    align-items: center;
+  }
+
+  & .mb-3 {
+    margin-bottom: 3rem;
+  }
+
+  & & label {
+    display: block;
+    text-transform: capitalize;
+  }
+
+  & input,
+  textarea {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  button[type="submit"] {
+    text-transform: uppercase;
+  }
+}
+
+/* ==========================================================
+Footer  Section
+========================================================== */
+
+footer {
+  background-color: var(--footer-bg-color);
+}
+
+footer * {
+  color: var(--white-color);
+}
+
+footer .footer-subheading {
   font-weight: 700;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+}
+
+footer .footer-portion--one p {
+  margin: 1rem 0 3rem 0;
+}
+
+footer .footer-portion--one {
+  text-align: left;
+
+  & .socials-icons {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  & .fa-brands {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: var(--supporting-color);
+    color: var(--btn-hover-bg-color);
+    border-radius: 50%;
+    transition: all 0.4s linear;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+
+    &:hover {
+      color: var(--supporting-color);
+      background-color: var(--btn-hover-bg-color);
+      rotate: 360deg;
+    }
+  }
+}
+
+footer
+  :is(.footer-portion--two, .footer-portion--three, .footer-portion--four) {
+  display: grid;
+  justify-content: end;
 }

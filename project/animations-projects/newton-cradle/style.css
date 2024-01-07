@@ -16,7 +16,7 @@ body {
   background-color: #191825;
 }
 
-.cradle {
+/* .cradle {
   width: 50rem;
   height: 50rem;
   border-top: 1.5rem solid #865dff;
@@ -54,14 +54,14 @@ body {
 
 .cradle div:first-child {
   transform-origin: left top;
-  /* animation: left-swing 2s linear infinite;
-  -webkit-animation: left-swing 2s linear infinite; */
+  animation: left-swing 2s linear infinite;
+  -webkit-animation: left-swing 2s linear infinite;
 }
 
 .cradle div:last-child {
   transform-origin: right top;
-  /* animation: right-swing 2s linear 1s infinite;
-  -webkit-animation: right-swing 2s linear 1s infinite; */
+  animation: right-swing 2s linear 1s infinite;
+  -webkit-animation: right-swing 2s linear 1s infinite;
 }
 
 @keyframes left-swing {
@@ -83,6 +83,90 @@ body {
 }
 
 @keyframes right-swing {
+  0% {
+    rotate: 0deg;
+  }
+
+  25% {
+    rotate: -35deg;
+  }
+
+  50% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+} */
+
+.cradle {
+  width: 50rem;
+  height: 50rem;
+  border-top: 1.5rem solid #865dff;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 3.6rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.cradle div {
+  height: 200px;
+  width: 0.5rem;
+  background-color: #865dff;
+  position: relative;
+}
+
+.cradle div::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -18px;
+  width: 4rem;
+  aspect-ratio: 1;
+  background-color: #865dff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.cradle div:first-child {
+  transform-origin: left top;
+  animation: left-side 2s linear infinite;
+  -webkit-animation: left-side 2s linear infinite;
+}
+
+.cradle div:last-child {
+  transform-origin: left top;
+  animation: right-side 2s linear 1s infinite;
+  -webkit-animation: right-side 2s linear 1s infinite;
+}
+
+@keyframes left-side {
+  0% {
+    rotate: 0deg;
+  }
+
+  25% {
+    rotate: 35deg;
+  }
+
+  50% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
+@keyframes right-side {
   0% {
     rotate: 0deg;
   }

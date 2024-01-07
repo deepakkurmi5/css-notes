@@ -13,7 +13,7 @@ body {
   align-items: center;
 }
 
-.universe {
+/* .universe {
   width: 25vw;
   aspect-ratio: 1;
   background-color: #ffbb5c;
@@ -86,5 +86,80 @@ body {
   100% {
     translate: -100%;
     scale: 0.95;
+  }
+} */
+
+.universe {
+  width: 25vw;
+  aspect-ratio: 1;
+  background-color: #ffbb5c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: skychange 10s ease infinite;
+  -webkit-animation: skychange 10s ease infinite;
+}
+
+@keyframes skychange {
+  0% {
+    background-color: #ffbb5cb5;
+  }
+  25% {
+    background-color: #fcbf49;
+  }
+  50% {
+    background-color: #000000;
+  }
+  75% {
+    background-color: #fcbf49;
+  }
+  100% {
+    background-color: #ffbb5cb5;
+  }
+}
+
+.sun {
+  position: relative;
+  width: 14vw;
+  aspect-ratio: 1;
+  background-color: #e25e3e;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.sun::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  aspect-ratio: 1;
+  background-color: black;
+  border-radius: 50%;
+  translate: 200px 0;
+  animation: slide 10s linear;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-animation: slide 10s ease infinite;
+}
+
+@keyframes slide {
+  0% {
+    translate: 200px 0;
+    scale: 1;
+  }
+
+  50% {
+    translate: 0px 0;
+    scale: 0.9;
+  }
+
+  100% {
+    translate: -200px 0;
+    scale: 1;
   }
 }
