@@ -1,30 +1,58 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap");
 @font-face {
-  font-family: "Poppins-SemiBold";
-  src: url("../utils/fonts/Poppins-SemiBold.ttf") format("ttf");
+  font-family: __Urbanist_44ewq;
+  src: url("../utils/fonts/Urbanist-Regular.ttf") format("TrueType");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  line-gap-override: 20%;
+}
+
+@font-face {
+  font-family: __Urbanist_44ewq;
+  src: url("../utils/fonts/Urbanist-SemiBold.ttf") format("TrueType");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: __Urbanist_44ewq;
+  src: url("../utils/fonts/Urbanist-MediumItalic.ttf") format("TrueType");
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: __Urbanist_Fallback_44ewq;
+  src: local("Arial");
+  size-adjust: 99.9%;
+  line-gap-override: 30%;
+  font-feature-settings: "smcp" 1;
+  -webkit-font-feature-settings: "smcp" 1;
+  -moz-font-feature-settings: "smcp" 1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: __Urbanist_44ew, __Urbanist_Fallback_44ewq;
 }
 
 body {
-  padding: 2rem 10rem;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
+  margin: 2rem;
+  font-weight: 500;
 }
 
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.8rem;
-  font-size-adjust: ex-height 0.5;
-  font-variant-position: sub;
-}
+/* 
+body {
 
-p {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-}
-
-a {
-  font-family: "Poppins-SemiBold";
-  font-feature-settings: "smcp" on;
-  -webkit-font-feature-settings: "smcp" on;
-  -moz-font-feature-settings: "smcp" on;
-}
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.56;
+  font-variant-caps: normal;
+  font-variant-ligatures: historical-ligatures;
+  font-variant-numeric: slashed-zero;
+  font-variation-settings: "wght" 850;
+  font-kerning: none;
+} */

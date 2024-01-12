@@ -1,0 +1,212 @@
+/* ==============================================
+Theme Rules
+============================================== */
+
+:root {
+  --body-bg-color: white;
+  --main-color: #0062ff;
+  --supporting-color: #ebf3fe;
+  --font-color: #424242;
+  --bg-color: #f7fcff;
+  --heading-color: #000a19;
+  --para-color: #504e4d;
+  --test: #070101;
+  --white-color: #ffffff;
+  --footer-bg-color: #040d12;
+  --hero-heading-color: #003b99;
+  --btn-bg-primary: #0062ff;
+  --btn-hover-bg-color: #003b99;
+  --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* ==============================================
+Base Rules
+============================================== */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  background-color: var(--body-bg-color);
+  font-family: "Urbanist", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration-line: none;
+  -moz-text-decoration-line: none;
+}
+
+p,
+a,
+li {
+  letter-spacing: 0.1rem;
+  color: var(--para-color);
+  font-size: 1.55rem;
+  line-height: 1.5;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+}
+
+/* ==============================================
+Layout Rule
+============================================== */
+
+.container {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 7rem 2.4rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-two--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ==============================================
+Module Rule
+============================================== */
+
+.btn {
+  text-transform: capitalize;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1.8rem 4rem;
+  border-radius: 0.8rem;
+  letter-spacing: 0.05rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+}
+
+.btn-primary {
+  color: var(--white-color);
+  background-color: var(--btn-bg-primary);
+}
+
+/* ==============================================
+Header Section
+============================================== */
+
+.navbar-section .container {
+  padding: 1rem 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-section .brand-logo img {
+  max-width: 90%;
+  height: auto;
+}
+
+.navbar .nav-link {
+  font-size: 1.65rem;
+  font-weight: 700;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    border-bottom: 2px solid var(--main-color);
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+/* ==============================================
+Hero Section
+============================================== */
+
+.hero-section {
+  background-image: linear-gradient(
+    to top right,
+    #3d86fa,
+    #4484fb,
+    #679eff,
+    #b3d2ff,
+    #ebf3fe
+  );
+
+  & .grid {
+    align-items: center;
+  }
+
+  & .hero-section--subheading {
+    letter-spacing: 0.2rem;
+    font-size: 1.4rem;
+    word-spacing: 0.2rem;
+    color: var(--btn-hover-bg-color);
+    font-weight: 700;
+  }
+
+  & .hero-section--heading {
+    font-size: 5rem;
+    color: var(--hero-heading-color);
+    font-weight: 900;
+    line-height: 1.5;
+  }
+
+  & .hero-section-para {
+    color: var(--white-color);
+    line-height: 1.56;
+    padding: 2.5rem 0 5rem 0;
+  }
+
+  & .hero-section--image img {
+    max-width: 95%;
+    height: auto;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+  }
+}
