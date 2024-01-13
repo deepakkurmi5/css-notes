@@ -218,3 +218,28 @@ The line-gap-override CSS descriptor for the @font-face at-rule defines the line
 
 line-gap-override: normal;
 line-gap-override: 90%;
+
+
+<!-- ?=========================================
+*ascent-override
+?========================================= -->
+
+
+The ascent-override CSS descriptor for the @font-face at-rule defines the ascent metric for the font. The ascent metric is the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.
+
+
+**Syntax** - 
+
+ascent-override: normal;
+ascent-override: 90%;
+
+<!-- ?=========================================
+*ascent-override
+?========================================= -->
+
+The descent-override CSS descriptor for the @font-face at-rule defines the descent metric for the font. The descent metric is the height below the baseline that CSS uses to lay out line boxes in an inline formatting context.
+
+**Syntax** - 
+
+descent-override: normal;
+descent-override: 90%;

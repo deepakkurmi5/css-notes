@@ -1,15 +1,19 @@
+/* 
+====================================================
+Urbanist Font
+==================================================== */
+
 @font-face {
   font-family: __Urbanist_44ewq;
-  src: url("../utils/fonts/Urbanist-Regular.ttf") format("TrueType");
+  src: url("../utils/fonts/Urbanist/Urbanist-Regular.ttf") format("TrueType");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  line-gap-override: 20%;
 }
 
 @font-face {
   font-family: __Urbanist_44ewq;
-  src: url("../utils/fonts/Urbanist-SemiBold.ttf") format("TrueType");
+  src: url("../utils/fonts/Urbanist/Urbanist-SemiBold.ttf") format("TrueType");
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -17,7 +21,8 @@
 
 @font-face {
   font-family: __Urbanist_44ewq;
-  src: url("../utils/fonts/Urbanist-MediumItalic.ttf") format("TrueType");
+  src: url("../utils/fonts/Urbanist/Urbanist-MediumItalic.ttf")
+    format("TrueType");
   font-style: italic;
   font-weight: 500;
   font-display: swap;
@@ -27,32 +32,165 @@
   font-family: __Urbanist_Fallback_44ewq;
   src: local("Arial");
   size-adjust: 99.9%;
-  line-gap-override: 30%;
-  font-feature-settings: "smcp" 1;
-  -webkit-font-feature-settings: "smcp" 1;
-  -moz-font-feature-settings: "smcp" 1;
+  line-gap-override: 0%;
 }
+
+/* 
+====================================================
+Cera-Round-Pro Font
+==================================================== */
+
+@font-face {
+  font-family: __Cera-Round-Pro_1wwq;
+  src: url("../utils/fonts/Cera-Round-Pro/Cera-Round-Pro-Thin.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: __Cera-Round-Pro_1wwq;
+  src: url("../utils/fonts/Cera-Round-Pro/Cera-Round-Pro-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: __Cera-Round-Pro_1wwq;
+  src: url("../utils/fonts/Cera-Round-Pro/Cera-Round-Pro-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: __Cera-Round-Pro_1wwq;
+  src: url("../utils/fonts/Cera-Round-Pro/Cera-Round-Pro-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: __Cera-Round-Pro_1wwq;
+  src: url("../utils/fonts/Cera-Round-Pro/Cera-Round-Pro-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: __Cera-Round-Pro_1wwq;
+  src: url("../utils/fonts/Cera-Round-Pro/Cera-Round-Pro-Black.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: __Cera-Round-Pro_Fallback_1wwq;
+  src: local("Arial");
+  size-adjust: 99.9%;
+  line-gap-override: 0%;
+  ascent-override: 111.5%;
+  descent-override: 30%;
+}
+
+/* 
+====================================================
+Theme Rule
+==================================================== */
+
+:root {
+  --heading-main-clr: #183153;
+  --yellow-1: #fab005;
+}
+
+/* 
+====================================================
+Base Rule
+==================================================== */
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: __Urbanist_44ew, __Urbanist_Fallback_44ewq;
+  font-family: __Cera-Round-Pro_1wwq, __Cera-Round-Pro_Fallback_1wwq;
+}
+
+html {
+  font-size: 65.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 2rem;
-  font-weight: 500;
+  text-rendering: optimizeSpeed;
+  font-feature-settings: "ss01" on;
+  -webkit-font-feature-settings: "ss01" on;
+  -moz-font-feature-settings: "ss01" on;
+}
+
+p,
+a,
+li {
+  letter-spacing: 0.01rem;
+  color: var(--heading-main-clr);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+:is(h1, h2, h3, h4, h5, h6, .h1) {
+  font-weight: 700;
 }
 
 /* 
-body {
+====================================================
+Layout Rule 
+==================================================== */
 
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.56;
-  font-variant-caps: normal;
-  font-variant-ligatures: historical-ligatures;
-  font-variant-numeric: slashed-zero;
-  font-variation-settings: "wght" 850;
-  font-kerning: none;
-} */
+.container {
+  max-width: 1088px;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+/* 
+====================================================
+Module Rules
+==================================================== */
+
+.main-heading {
+  color: var(--heading-main-clr);
+  font-size: 4rem;
+}
+
+/* 
+====================================================
+Hero Section 
+==================================================== */
+
+.hero-section {
+  & .hero-section--content {
+    width: 55rem;
+    margin: 0 auto;
+    text-align: center;
+
+    & .main-heading {
+      & span {
+        color: var(--yellow-1);
+      }
+    }
+
+    & .hero-subheading {
+      padding: 2rem 0 4rem 0;
+      font-size: 1.8rem;
+    }
+  }
+}
