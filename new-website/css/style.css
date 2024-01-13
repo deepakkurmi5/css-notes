@@ -8,6 +8,15 @@ Theme Rules
   --supporting-color: #ebf3fe;
   --font-color: #424242;
   --bg-color: #f7fcff;
+  --bg-primary-clr: linear-gradient(
+    to top right,
+    #3d86fa,
+    #4484fb,
+    #679eff,
+    #b3d2ff,
+    #ebf3fe
+  );
+  --bg-seconday-clr: linear-gradient(to right, #0575e6, #021b79);
   --heading-color: #000a19;
   --para-color: #504e4d;
   --test: #070101;
@@ -93,6 +102,24 @@ Layout Rule
   grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-three--cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four--cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+:is(
+    .about-section,
+    .courses-section,
+    .why-choose-eduHub,
+    .contact-home--section
+  )
+  .container:nth-child(1) {
+  padding: 3rem 2.4rem;
+}
+
 /* ==============================================
 Module Rule
 ============================================== */
@@ -114,6 +141,22 @@ Module Rule
 .btn-primary {
   color: var(--white-color);
   background-color: var(--btn-bg-primary);
+}
+
+.section-common--heading {
+  font-size: 2.8rem;
+  color: var(--test);
+}
+
+.section-common--subheading {
+  font-size: 1.6rem;
+  padding-top: 0.8rem;
+  font-weight: 500;
+}
+
+.section-common--title {
+  font-size: 1.8rem;
+  padding: 1.8rem 0;
 }
 
 /* ==============================================
@@ -166,14 +209,30 @@ Hero Section
 ============================================== */
 
 .hero-section {
-  background-image: linear-gradient(
-    to top right,
-    #3d86fa,
-    #4484fb,
-    #679eff,
-    #b3d2ff,
-    #ebf3fe
-  );
+  position: relative;
+  background-image: var(--bg-primary-clr);
+
+  & .custom-shape-divider-bottom-1705160814 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  & .custom-shape-divider-bottom-1705160814 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 90px;
+    transform: rotateY(180deg);
+  }
+
+  & .custom-shape-divider-bottom-1705160814 .shape-fill {
+    fill: #ffffff;
+  }
 
   & .grid {
     align-items: center;
@@ -208,5 +267,169 @@ Hero Section
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
+  }
+}
+
+/* ==============================================
+About Section
+============================================== */
+
+.about-section {
+  & .about-card {
+    text-align: center;
+
+    & img {
+      max-width: 100%;
+      padding: 2rem;
+      height: 10rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: rotate 0.4s linear;
+      background-color: var(--supporting-color);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      -webkit-transition: rotate 0.4s linear;
+      -moz-transition: rotate 0.4s linear;
+      -ms-transition: rotate 0.4s linear;
+      -o-transition: rotate 0.4s linear;
+    }
+
+    & img:hover {
+      background: var(--bg-seconday-clr);
+      rotate: 360deg;
+    }
+  }
+}
+
+/* ==============================================
+Courses Section
+============================================== */
+
+.courses-section {
+  background-color: var(--bg-color);
+
+  .grid {
+    gap: 3rem;
+  }
+
+  & .course-card {
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+
+    & .fa-solid,
+    .fa-brands {
+      font-size: 3rem;
+      padding: 3rem;
+      color: var(--hero-heading-color);
+      background-color: var(--supporting-color);
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+    }
+  }
+
+  & .course-card:hover {
+    cursor: pointer;
+    box-shadow: var(--btn-box-shadow);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+
+/* ==============================================
+why-choose-eduHub
+============================================== */
+
+.why-choose-eduHub {
+  & .text-align--right {
+    text-align: right;
+
+    & .why-choose--card {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
+  }
+
+  & .why-choose--card {
+    margin-top: 3.5rem;
+
+    & .common-text--highlight {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      color: var(--main-color);
+      font-size: 2.3rem;
+      background-color: var(--supporting-color);
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+    }
+  }
+
+  & .why-choose-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & figure {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & img {
+        max-width: 90%;
+        height: auto;
+      }
+    }
+  }
+}
+
+/* ==============================================
+Conatc Home Section
+============================================== */
+
+.contact-home--section {
+  & .container {
+    width: 78%;
+    margin-bottom: 3rem;
+    box-shadow: var(--btn-box-shadow);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+
+  & .grid {
+    align-items: center;
+  }
+
+  & .contact-home--content {
+    & p {
+      padding: 1.5rem 0 3rem 0;
+    }
+  }
+
+  & .contact-home--image img {
+    max-width: 80%;
+    height: auto;
   }
 }
