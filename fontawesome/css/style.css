@@ -140,63 +140,14 @@ body {
 p,
 a,
 li {
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.01rem;
   color: var(--heading-main-clr);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
-  font-size: 1.6rem;
-  color: var(--heading-main-clr);
 }
 
 :is(h1, h2, h3, h4, h5, h6, .h1) {
   font-weight: 700;
-  color: var(--heading-main-clr);
-  text-shadow: 0.2px 0.2px 0.5px var(--heading-main-clr);
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2.4rem;
-  padding-bottom: 1rem;
-}
-
-p {
-  margin-top: 2rem;
-}
-
-table {
-  width: 100%;
-  margin-top: 1rem;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  color: var(--heading-main-clr);
-  text-align: left;
-  padding: 1.5rem 0;
-  border-block-end: 0.05rem solid var(--heading-main-clr);
-}
-
-th {
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-td {
-  font-size: 1.4rem;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: aliceblue;
-}
-
-table tr :is(:not(th:nth-child(1), td:nth-child(1))) {
-  text-align: center;
 }
 
 /* 
@@ -207,10 +158,10 @@ Layout Rule
 .container {
   max-width: 1088px;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
-/*  
+/* 
 ====================================================
 Module Rules
 ==================================================== */
@@ -218,4 +169,28 @@ Module Rules
 .main-heading {
   color: var(--heading-main-clr);
   font-size: 4rem;
+}
+
+/* 
+====================================================
+Hero Section 
+==================================================== */
+
+.hero-section {
+  & .hero-section--content {
+    width: 55rem;
+    margin: 0 auto;
+    text-align: center;
+
+    & .main-heading {
+      & span {
+        color: var(--yellow-1);
+      }
+    }
+
+    & .hero-subheading {
+      padding: 2rem 0 4rem 0;
+      font-size: 1.8rem;
+    }
+  }
 }

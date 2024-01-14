@@ -2,7 +2,6 @@
 Font Docs
 ========================================= -->
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts
 https://www.w3schools.com/css/css_font.asp
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide
@@ -234,7 +233,7 @@ ascent-override: normal;
 ascent-override: 90%;
 
 <!-- ?=========================================
-*ascent-override
+*descent-override
 ?========================================= -->
 
 The descent-override CSS descriptor for the @font-face at-rule defines the descent metric for the font. The descent metric is the height below the baseline that CSS uses to lay out line boxes in an inline formatting context.
