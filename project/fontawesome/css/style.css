@@ -3,7 +3,7 @@
 Urbanist Font
 ==================================================== */
 
-/* @font-face {
+@font-face {
   font-family: __Urbanist_44ewq;
   src: url("../utils/fonts/Urbanist/Urbanist-Regular.ttf") format("TrueType");
   font-style: normal;
@@ -33,14 +33,14 @@ Urbanist Font
   src: local("Arial");
   size-adjust: 99.9%;
   line-gap-override: 0%;
-} */
+}
 
 /* 
 ====================================================
 Cera-Round-Pro Font
 ==================================================== */
 
-/* @font-face {
+@font-face {
   font-family: __Cera-Round-Pro_1wwq;
   src: url("../utils/fonts/Cera-Round-Pro/CeraRoundPro-Thin.otf")
     format("opentype");
@@ -101,80 +101,6 @@ Cera-Round-Pro Font
   line-gap-override: 0%;
   ascent-override: 111.5%;
   descent-override: 30%;
-} */
-
-/* 
-====================================================
-Odin-Rounded Font
-==================================================== */
-
-/* @font-face {
-  font-family: __Odin_Rounded_0sl;
-  src: url("../utils/fonts/Odin-Rounded/Odin-Rounded-Light.otf")
-    format("opentype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: __Odin_Rounded_0sl;
-  src: url("../utils/fonts/Odin-Rounded/Odin-Rounded-Regular.otf")
-    format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: __Odin_Rounded_0sl;
-  src: url("../utils/fonts/Odin-Rounded/Odin-Rounded-Bold.otf")
-    format("opentype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: __Odin_Rounded_Fallback_1wwq;
-  src: local("Arial");
-  size-adjust: 99.9%;
-  line-gap-override: 0%;
-  ascent-override: 111.5%;
-  descent-override: 30%;
-} */
-
-@font-face {
-  font-family: __Urbanist_1wq;
-  src: url("../utils/fonts/Urbanist/Urbanist-Light.ttf") format("TrueType");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: __Urbanist_1wq;
-  src: url("../utils/fonts/Urbanist/Urbanist-Medium.ttf") format("TrueType");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: __Urbanist_1wq;
-  src: url("../utils/fonts/Urbanist/Urbanist-SemiBold.ttf") format("TrueType");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: __Urbanist_Fallback_1wq;
-  src: local("Arial");
-  size-adjust: 99.9%;
-  line-gap-override: 0%;
-  ascent-override: 110%;
-  descent-override: 30%;
 }
 
 /* 
@@ -196,10 +122,7 @@ Base Rule
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* font-family: "Roboto", sans-serif; */
-  font-family: __Urbanist_1wq, __Urbanist_Fallback_1wq;
-  /* font-family: __Cera-Round-Pro_1wwq, __Cera-Round-Pro_Fallback_1wwq; */
-  /* font-family: __Odin_Rounded_0sl, __Odin_Rounded_Fallback_1wwq; */
+  font-family: __Cera-Round-Pro_1wwq, __Cera-Round-Pro_Fallback_1wwq;
 }
 
 html {
@@ -209,69 +132,22 @@ html {
 
 body {
   text-rendering: optimizeSpeed;
+  font-feature-settings: "ss01" on;
+  -webkit-font-feature-settings: "ss01" on;
+  -moz-font-feature-settings: "ss01" on;
 }
 
 p,
 a,
 li {
-  letter-spacing: 0.03rem;
-  word-spacing: 0.03rem;
+  letter-spacing: 0.01rem;
   color: var(--heading-main-clr);
-  font-weight: 400;
-  line-height: 1.56;
-  font-size: 1.6rem;
-  color: var(--heading-main-clr);
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 :is(h1, h2, h3, h4, h5, h6, .h1) {
-  font-weight: 600;
-  color: var(--heading-main-clr);
-  text-shadow: 0.2px 0.2px 0.5px var(--heading-main-clr);
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2.4rem;
-  padding-bottom: 1rem;
-}
-
-p {
-  margin-top: 2rem;
-}
-
-table {
-  width: 100%;
-  margin-top: 1rem;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  color: var(--heading-main-clr);
-  text-align: left;
-  padding: 1.5rem 0;
-  border-block-end: 0.05rem solid var(--heading-main-clr);
-}
-
-th {
-  font-size: 1.6rem;
   font-weight: 700;
-  text-transform: uppercase;
-}
-
-td {
-  font-size: 1.4rem;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: aliceblue;
-}
-
-table tr :is(:not(th:nth-child(1), td:nth-child(1))) {
-  text-align: center;
 }
 
 /* 
@@ -282,10 +158,10 @@ Layout Rule
 .container {
   max-width: 1088px;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 5rem 0;
 }
 
-/*  
+/* 
 ====================================================
 Module Rules
 ==================================================== */
@@ -293,4 +169,28 @@ Module Rules
 .main-heading {
   color: var(--heading-main-clr);
   font-size: 4rem;
+}
+
+/* 
+====================================================
+Hero Section 
+==================================================== */
+
+.hero-section {
+  & .hero-section--content {
+    width: 55rem;
+    margin: 0 auto;
+    text-align: center;
+
+    & .main-heading {
+      & span {
+        color: var(--yellow-1);
+      }
+    }
+
+    & .hero-subheading {
+      padding: 2rem 0 4rem 0;
+      font-size: 1.8rem;
+    }
+  }
 }

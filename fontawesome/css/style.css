@@ -1,196 +1,223 @@
-/* 
-====================================================
-Urbanist Font
-==================================================== */
-
 @font-face {
-  font-family: __Urbanist_44ewq;
-  src: url("../utils/fonts/Urbanist/Urbanist-Regular.ttf") format("TrueType");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: __Urbanist_44ewq;
-  src: url("../utils/fonts/Urbanist/Urbanist-SemiBold.ttf") format("TrueType");
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: __Urbanist_44ewq;
-  src: url("../utils/fonts/Urbanist/Urbanist-MediumItalic.ttf")
-    format("TrueType");
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: __Urbanist_Fallback_44ewq;
-  src: local("Arial");
-  size-adjust: 99.9%;
-  line-gap-override: 0%;
-}
-
-/* 
-====================================================
-Cera-Round-Pro Font
-==================================================== */
-
-@font-face {
-  font-family: __Cera-Round-Pro_1wwq;
-  src: url("../utils/fonts/Cera-Round-Pro/CeraRoundPro-Thin.otf")
-    format("opentype");
+  font-family: __CeraRoundPro_wq0;
+  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Thin.otf")
+    format("OpenType");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: __Cera-Round-Pro_1wwq;
-  src: url("../utils/fonts/Cera-Round-Pro/CeraRoundPro-Light.otf")
-    format("opentype");
+  font-family: __CeraRoundPro_wq0;
+  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Light.otf")
+    format("OpenType");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: __Cera-Round-Pro_1wwq;
-  src: url("../utils/fonts/Cera-Round-Pro/CeraRoundPro-Regular.otf")
-    format("opentype");
+  font-family: __CeraRoundPro_wq0;
+  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Regular.otf")
+    format("OpenType");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: __Cera-Round-Pro_1wwq;
-  src: url("../utils/fonts/Cera-Round-Pro/CeraRoundPro-Medium.otf")
-    format("opentype");
+  font-family: __CeraRoundPro_wq0;
+  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Medium.otf")
+    format("OpenType");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: __Cera-Round-Pro_1wwq;
-  src: url("../utils/fonts/Cera-Round-Pro/CeraRoundPro-Bold.otf")
-    format("opentype");
+  font-family: __CeraRoundPro_wq0;
+  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Bold.otf")
+    format("OpenType");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: __Cera-Round-Pro_1wwq;
-  src: url("../utils/fonts/Cera-Round-Pro/CeraRoundPro-Black.otf")
-    format("opentype");
+  font-family: __CeraRoundPro_wq0;
+  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Black.otf")
+    format("OpenType");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: __Cera-Round-Pro_Fallback_1wwq;
+  font-family: __CeraRoundPro_FallBack_wq0;
   src: local("Arial");
-  size-adjust: 99.9%;
   line-gap-override: 0%;
-  ascent-override: 111.5%;
+  ascent-override: 110%;
   descent-override: 30%;
 }
 
-/* 
-====================================================
+/* ======================================
 Theme Rule
-==================================================== */
+====================================== */
 
 :root {
   --heading-main-clr: #183153;
-  --yellow-1: #fab005;
+  --link-clr: #616d8a;
+  --link-hover-clr: #156fbf;
+
+  /* sizes */
+  --size-base: 1rem; /* 10px */
 }
 
-/* 
-====================================================
+/* ======================================
 Base Rule
-==================================================== */
+====================================== */
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: __Cera-Round-Pro_1wwq, __Cera-Round-Pro_Fallback_1wwq;
-}
-
-html {
-  font-size: 65.5%;
-  scroll-behavior: smooth;
+  font-family: __CeraRoundPro_wq0, __CeraRoundPro_FallBack_wq0;
 }
 
 body {
-  text-rendering: optimizeSpeed;
   font-feature-settings: "ss01" on;
   -webkit-font-feature-settings: "ss01" on;
   -moz-font-feature-settings: "ss01" on;
 }
 
-p,
-a,
-li {
-  letter-spacing: 0.01rem;
+html {
+  font-size: 65.5%;
+}
+
+:is(h1, h2, h3, h4, h5, h6, p) {
   color: var(--heading-main-clr);
-  font-weight: 500;
-  line-height: 1.5;
 }
 
-:is(h1, h2, h3, h4, h5, h6, .h1) {
-  font-weight: 700;
+h1 {
+  font-size: 4.8rem;
 }
 
-/* 
-====================================================
-Layout Rule 
-==================================================== */
+h2 {
+  font-size: 3.2rem;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+/* ======================================
+Layout Rule
+====================================== */
 
 .container {
-  max-width: 1088px;
+  max-width: 1090px;
   margin: 0 auto;
-  padding: 5rem 0;
+  padding: 4rem 2rem;
 }
 
-/* 
-====================================================
-Module Rules
-==================================================== */
+/* ======================================
+Module Rule
+====================================== */
 
-.main-heading {
+.btn {
   color: var(--heading-main-clr);
-  font-size: 4rem;
 }
 
-/* 
-====================================================
-Hero Section 
-==================================================== */
+/* ======================================
+Header Section 
+====================================== */
 
-.hero-section {
-  & .hero-section--content {
-    width: 55rem;
-    margin: 0 auto;
-    text-align: center;
+.header-section {
+  height: 7.6rem;
 
-    & .main-heading {
-      & span {
-        color: var(--yellow-1);
-      }
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+  }
+
+  & .fa-bars,
+  .fa-xmark {
+    display: none;
+  }
+
+  & .header-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+  }
+
+  & .header-wrapper .navbar ul {
+    display: flex;
+    gap: 4rem;
+  }
+
+  & :is(.navbar, .navbar-menu) .nav-link {
+    color: var(--link-clr);
+    font-size: 1.55rem;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+
+    &:hover {
+      color: var(--link-hover-clr);
     }
+  }
 
-    & .hero-subheading {
-      padding: 2rem 0 4rem 0;
-      font-size: 1.8rem;
+  & nav.container {
+    padding: 1rem 2rem 0rem;
+  }
+
+  & .navbar-menu {
+    display: none;
+  }
+
+  & .navbar-menu .nav-item {
+    border-bottom: 0.05rem solid var(--link-clr);
+  }
+
+  & .navbar-menu .nav-link {
+    padding: 1rem 0;
+    text-indent: 0.4rem;
+  }
+
+  & .fa-xl {
+    height: 2.2rem;
+    width: 2.2rem;
+    color: var(--link-clr);
+    cursor: pointer;
+  }
+}
+
+@media (width <= 768px) {
+  .header-section {
+    & .header-wrapper .navbar ul {
+      gap: 2rem;
+    }
+  }
+}
+
+@media (width <= 600px) {
+  .header-section {
+    & .fa-bars {
+      display: block;
+    }
+    .navbar {
+      display: none;
     }
   }
 }

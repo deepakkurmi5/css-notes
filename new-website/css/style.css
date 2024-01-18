@@ -246,17 +246,17 @@ Hero Section
     font-weight: 700;
   }
 
+  & .hero-section-para {
+    color: var(--white-color);
+    line-height: 1.56;
+    padding: 2.5rem 0 5rem 0;
+  }
+
   & .hero-section--heading {
     font-size: 5rem;
     color: var(--hero-heading-color);
     font-weight: 900;
     line-height: 1.5;
-  }
-
-  & .hero-section-para {
-    color: var(--white-color);
-    line-height: 1.56;
-    padding: 2.5rem 0 5rem 0;
   }
 
   & .hero-section--image img {
@@ -268,6 +268,23 @@ Hero Section
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
   }
+
+  & .hero-section--image {
+    animation: fadeUp 0.3s linear;
+    -webkit-animation: fadeUp 0.3s linear;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    translate: 0 150px;
+    opacity: 0;
+  }
+
+  to {
+    translate: 0 0px;
+    opacity: 1;
+  }
 }
 
 /* ==============================================
@@ -275,6 +292,10 @@ About Section
 ============================================== */
 
 .about-section {
+  & .grid {
+    gap: 2rem;
+  }
+
   & .about-card {
     text-align: center;
 
@@ -353,6 +374,10 @@ why-choose-eduHub
 ============================================== */
 
 .why-choose-eduHub {
+  & .grid {
+    gap: 5rem;
+  }
+
   & .text-align--right {
     text-align: right;
 
@@ -431,5 +456,226 @@ Conatc Home Section
   & .contact-home--image img {
     max-width: 80%;
     height: auto;
+  }
+}
+
+/* ==============================================
+Footer Section
+============================================== */
+
+footer {
+  background-color: var(--footer-bg-color);
+}
+
+footer * {
+  color: var(--white-color);
+}
+
+footer {
+  & .footer-portion--one {
+    & .brand-logo {
+      font-size: 2rem;
+    }
+
+    & p {
+      padding: 1.5rem 0 2.5rem 0;
+    }
+
+    & .socials-icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    & .socials-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem;
+      background-color: var(--bg-color);
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+
+    & .socials-icons a i {
+      font-size: 1.8rem;
+      color: var(--btn-hover-bg-color);
+    }
+  }
+
+  & .footer-portion {
+    display: grid;
+    justify-content: end;
+
+    & .footer-subheading {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+}
+
+/* ==============================================
+Media Query
+============================================== */
+
+@media (width <= 992px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .hero-section {
+    & .custom-shape-divider-bottom-1705160814 svg {
+      height: 50px;
+    }
+  }
+
+  .about-section {
+    & .grid-three--cols {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  .courses-section {
+    & .grid-four--cols {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  .why-choose-eduHub {
+    & .grid {
+      gap: 3rem;
+    }
+
+    & .why-choose-left {
+      order: 2;
+    }
+    & .why-choose-center {
+      order: 1;
+    }
+
+    & .why-choose-right {
+      order: 3;
+    }
+  }
+
+  .contact-home--section {
+    & .container {
+      width: 95%;
+    }
+  }
+}
+
+@media (width <= 768px) {
+  .hero-section {
+    & .hero-section--content {
+      text-align: center;
+    }
+
+    & .grid-two--cols {
+      grid-template-columns: 1fr;
+    }
+
+    & .hero-section--heading {
+      text-align: center;
+      font-size: 4rem;
+    }
+
+    & .hero-section--image figure {
+      display: flex;
+      justify-content: center;
+    }
+
+    & .hero-section--image img {
+      max-width: 60%;
+    }
+  }
+
+  .why-choose-eduHub {
+    & .grid {
+      gap: 0rem;
+    }
+
+    & .grid-three--cols {
+      grid-template-columns: 1fr;
+    }
+
+    & .text-align--right {
+      text-align: left;
+
+      & .why-choose--card {
+        align-items: flex-start;
+      }
+    }
+    & .why-choose--card {
+      margin-top: 2rem;
+    }
+  }
+
+  .contact-home--section {
+    & .grid {
+      gap: 3rem;
+    }
+
+    & .grid-two--cols {
+      grid-template-columns: 1fr;
+    }
+
+    & .contact-home--image {
+      display: flex;
+      justify-content: center;
+    }
+
+    & .contact-home--image img {
+      max-width: 60%;
+    }
+  }
+}
+
+@media (width <= 600px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 4rem 2rem;
+  }
+
+  .navbar-section .container {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .navbar-section .brand-logo img {
+    max-width: 70%;
+  }
+
+  footer {
+    & .grid {
+      gap: 4rem;
+    }
+
+    & .footer-portion {
+      display: grid;
+      justify-content: center;
+    }
+
+    & .footer-portion--one {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & .grid-four--cols {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    & .footer-portion--one {
+      grid-area: 1/1/2/-1;
+    }
   }
 }
