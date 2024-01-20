@@ -65,9 +65,28 @@ Theme Rule
 ====================================== */
 
 :root {
+  --main-clr: #183153;
+
   --heading-main-clr: #183153;
   --link-clr: #616d8a;
   --link-hover-clr: #156fbf;
+
+  /* bg color  */
+  --bg-main: #f0f1f3;
+
+  /* colors  */
+  --white-clr: white;
+  --black-clr: black;
+  --yellow-light: #ffd43b;
+  --yellow-bold: #fab005;
+  --pink-light: #e599f7;
+  --pink-dark: #9c36b5;
+  --purpul-light: #b197fc;
+  --purpul-dark: #6741d9;
+  --green-light: #63e6be;
+  --green-dark: #0ca67a;
+  --sky-blue-light: #74c0fc;
+  --sky-blue-dark: #146ebe;
 
   /* sizes */
   --size-base: 1rem; /* 10px */
@@ -116,6 +135,37 @@ ul {
   width: 100%;
 }
 
+p,
+a,
+li {
+  letter-spacing: 0.02rem;
+  font-size: 1.2rem;
+  line-height: 1.56;
+}
+
+:is(button, .btn) {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--main-clr);
+  padding: 1.6rem 2.4rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.7rem 0 var(--main-clr);
+  border-inline: 0.2rem solid var(--main-clr);
+  border-top: 0.2rem solid var(--main-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.6rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  align-items: center;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
 /* ======================================
 Layout Rule
 ====================================== */
@@ -130,8 +180,25 @@ Layout Rule
 Module Rule
 ====================================== */
 
-.btn {
-  color: var(--heading-main-clr);
+.btn-main {
+  background-color: var(--white-clr);
+}
+.btn-primary {
+  background-color: var(--purpul-light);
+}
+
+.btn-secondary {
+  background-color: var(--yellow-light);
+}
+
+.btn-tertiary {
+  background-color: var(--sky-blue-light);
+}
+
+.card {
+}
+
+.badge {
 }
 
 /* ======================================
@@ -213,11 +280,86 @@ Header Section
 
 @media (width <= 600px) {
   .header-section {
+    & .container {
+      padding: 2rem 2rem 0rem;
+    }
+
     & .fa-bars {
       display: block;
     }
     .navbar {
       display: none;
     }
+  }
+}
+
+/* ======================================
+Hero Section 
+====================================== */
+
+.hero-section {
+  background: url("https://img.fortawesome.com/1ce05b4b/hero-icon-bg.svg")
+      no-repeat 115.5rem 2.5rem,
+    url("https://img.fortawesome.com/1ce05b4b/hero-icon-bg.svg") no-repeat -70.2rem
+      2.5rem;
+
+  height: 100vh;
+  & .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3.5rem;
+    width: 70rem;
+  }
+
+  & .hero-heading span {
+    color: var(--yellow-bold);
+  }
+
+  & .hero-heading span::before {
+    content: "website.";
+    animation: slideText 4s linear;
+    -webkit-animation: slideText 8s linear;
+  }
+
+  & .hero-subheading {
+    font-size: 1.8rem;
+  }
+
+  & .btn-group {
+    display: flex;
+    gap: 2rem;
+  }
+
+  & .btn-group img {
+    max-width: 2rem;
+    height: auto;
+  }
+}
+
+@keyframes slideText {
+  25%,
+  35%,
+  50% {
+    opacity: 0;
+  }
+
+  50%,
+  75%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    content: "native apps.";
+  }
+
+  75% {
+    content: "designs.";
+  }
+  100% {
+    content: "project.";
   }
 }
