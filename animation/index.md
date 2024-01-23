@@ -77,5 +77,23 @@ The animation-fill-mode property can have the following values:
 
 * animation - shorthand
 
-<!-- * animation-timeline -->
+- animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+
+
+* animation-timeline
+
+The animation-timeline CSS property specifies the timeline that is used to control the progress of a CSS animation.
+
+**Values**
+
+* scroll() -  default value is -  scroll(block & nearest)
+
+ex:- scroll(block) , scroll(y) ,  scroll(inline), scroll(x), scroll(nearest)
+
+* view() - 
+
+ex:- view(top-offset, bottom-offset) 
+
+* auto
+
 <!-- * animation-composition -->

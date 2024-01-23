@@ -1,6 +1,6 @@
 @font-face {
   font-family: __CeraRoundPro_wq0;
-  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Thin.otf")
+  src: url("../../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Thin.otf")
     format("OpenType");
   font-weight: 100;
   font-style: normal;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: __CeraRoundPro_wq0;
-  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Light.otf")
+  src: url("../../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Light.otf")
     format("OpenType");
   font-weight: 300;
   font-style: normal;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: __CeraRoundPro_wq0;
-  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Regular.otf")
+  src: url("../../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Regular.otf")
     format("OpenType");
   font-weight: 400;
   font-style: normal;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: __CeraRoundPro_wq0;
-  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Medium.otf")
+  src: url("../../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Medium.otf")
     format("OpenType");
   font-weight: 500;
   font-style: normal;
@@ -36,7 +36,7 @@
 
 @font-face {
   font-family: __CeraRoundPro_wq0;
-  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Bold.otf")
+  src: url("../../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Bold.otf")
     format("OpenType");
   font-weight: 700;
   font-style: normal;
@@ -45,7 +45,7 @@
 
 @font-face {
   font-family: __CeraRoundPro_wq0;
-  src: url("../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Black.otf")
+  src: url("../../../utils/fonts/Cera-Round-Pro/CeraRoundPro-Black.otf")
     format("OpenType");
   font-weight: 900;
   font-style: normal;
@@ -65,28 +65,14 @@ Theme Rule
 ====================================== */
 
 :root {
-  --main-clr: #183153;
+  --main-clr: black;
 
-  --heading-main-clr: #183153;
-  --link-clr: #616d8a;
-  --link-hover-clr: #156fbf;
-
-  /* bg color  */
-  --bg-main: #f0f1f3;
+  --heading-main-clr: white;
+  --text-clr: rgb(223, 223, 223);
 
   /* colors  */
   --white-clr: white;
   --black-clr: black;
-  --yellow-light: #ffd43b;
-  --yellow-bold: #fab005;
-  --pink-light: #e599f7;
-  --pink-dark: #9c36b5;
-  --purpul-light: #b197fc;
-  --purpul-dark: #6741d9;
-  --green-light: #63e6be;
-  --green-dark: #0ca67a;
-  --sky-blue-light: #74c0fc;
-  --sky-blue-dark: #146ebe;
 
   /* sizes */
   --size-base: 1rem; /* 10px */
@@ -104,6 +90,7 @@ Base Rule
 }
 
 body {
+  background-color: var(--main-clr);
   font-feature-settings: "ss01" on;
   -webkit-font-feature-settings: "ss01" on;
   -moz-font-feature-settings: "ss01" on;
@@ -118,7 +105,7 @@ html {
 }
 
 h1 {
-  font-size: 4.8rem;
+  font-size: 4.5rem;
 }
 
 h2 {
@@ -139,8 +126,9 @@ p,
 a,
 li {
   letter-spacing: 0.02rem;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   line-height: 1.56;
+  color: var(--text-clr);
 }
 
 :is(button, .btn) {
@@ -171,9 +159,9 @@ Layout Rule
 ====================================== */
 
 .container {
-  max-width: 1090px;
+  max-width: 950px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
 }
 
 /* ======================================
@@ -195,171 +183,84 @@ Module Rule
   background-color: var(--sky-blue-light);
 }
 
-.card {
-}
-
-.badge {
-}
-
 /* ======================================
-Header Section 
-====================================== */
-
-.header-section {
-  height: 7.6rem;
-
-  & .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 2rem;
-  }
-
-  & .fa-bars,
-  .fa-xmark {
-    display: none;
-  }
-
-  & .header-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8rem;
-  }
-
-  & .header-wrapper .navbar ul {
-    display: flex;
-    gap: 4rem;
-  }
-
-  & :is(.navbar, .navbar-menu) .nav-link {
-    color: var(--link-clr);
-    font-size: 1.55rem;
-    transition: all 0.2s linear;
-    -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    -ms-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-
-    &:hover {
-      color: var(--link-hover-clr);
-    }
-  }
-
-  & nav.container {
-    padding: 1rem 2rem 0rem;
-  }
-
-  & .navbar-menu {
-    display: none;
-  }
-
-  & .navbar-menu .nav-item {
-    border-bottom: 0.05rem solid var(--link-clr);
-  }
-
-  & .navbar-menu .nav-link {
-    padding: 1rem 0;
-    text-indent: 0.4rem;
-  }
-
-  & .fa-xl {
-    height: 2.2rem;
-    width: 2.2rem;
-    color: var(--link-clr);
-    cursor: pointer;
-  }
-}
-
-@media (width <= 768px) {
-  .header-section {
-    & .header-wrapper .navbar ul {
-      gap: 2rem;
-    }
-  }
-}
-
-@media (width <= 600px) {
-  .header-section {
-    & .container {
-      padding: 2rem 2rem 0rem;
-    }
-
-    & .fa-bars {
-      display: block;
-    }
-    .navbar {
-      display: none;
-    }
-  }
-}
-
-/* ======================================
-Hero Section 
+hero-section
 ====================================== */
 
 .hero-section {
-  background: url("https://img.fortawesome.com/1ce05b4b/hero-icon-bg.svg")
-      no-repeat 115.5rem 2.5rem,
-    url("https://img.fortawesome.com/1ce05b4b/hero-icon-bg.svg") no-repeat -70.2rem
-      2.5rem;
-
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3Njk0MTgxMHx8ZW58MHx8fHx8")
+    no-repeat;
+  background-size: contain;
+  background-position: center;
+
   & .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 3.5rem;
-    width: 70rem;
-  }
-
-  & .hero-heading span {
-    color: var(--yellow-bold);
-  }
-
-  & .hero-heading span::before {
-    content: "website.";
-    animation: slideText 4s linear;
-    -webkit-animation: slideText 8s linear;
-  }
-
-  & .hero-subheading {
-    font-size: 1.8rem;
-  }
-
-  & .btn-group {
-    display: flex;
     gap: 2rem;
-  }
-
-  & .btn-group img {
-    max-width: 2rem;
-    height: auto;
   }
 }
 
-@keyframes slideText {
-  25%,
-  35%,
-  50% {
+/* ======================================
+content-section
+====================================== */
+
+.content-section {
+  & .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  & picture {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.content-section picture img {
+  animation: fadeIn linear;
+  -webkit-animation: fadeIn linear;
+  animation-timeline: view(700px 0px);
+}
+
+@keyframes fadeIn {
+  from {
+    scale: 0.5;
     opacity: 0;
   }
-
-  50%,
-  75%,
-  100% {
+  to {
+    scale: 1;
     opacity: 1;
   }
+}
 
-  50% {
-    content: "native apps.";
-  }
+/* ======================================
+scroll-progress
+====================================== */
 
-  75% {
-    content: "designs.";
-  }
+.scroll-progress {
+  height: 6px;
+  width: 100%;
+  background-color: rgb(22, 68, 186);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  -webkit-animation: scroll-watcher linear;
+  animation-timeline: scroll(nearest);
+}
+
+@keyframes scroll-watcher {
   100% {
-    content: "project.";
+    scale: 1 1;
   }
 }
