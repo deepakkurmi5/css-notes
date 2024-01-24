@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  color: white;
+  line-height: 1.5;
+  background-color: black;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Inter";
+  font-weight: 700;
+}
+
+.container {
+  padding: 3rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/* 
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+} */
+
+table {
+  width: 100%;
+  margin-top: 40px;
+  background-color: #323232;
+  border-collapse: collapse;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+caption,
+th,
+td {
+  padding: 1rem;
+  letter-spacing: 1;
+  word-spacing: 1px;
+}
+
+caption {
+  background-color: hsl(0 0% 0%);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+th {
+  background-color: hsl(0 0% 0% / 0.5);
+}
+
+tr:nth-of-type(2n) {
+  background-color: hsl(0 0% 0% / 0.3);
+}
+
+@media (width <= 650px) {
+  caption {
+    text-align: center;
+  }
+  th {
+    display: none;
+  }
+  td {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    text-align: right;
+  }
+
+  td:first-child {
+    padding-top: 2rem;
+  }
+  td:last-child {
+    padding-bottom: 2rem;
+  }
+
+  td::before {
+    content: attr(data-cell);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: left;
+  }
+}

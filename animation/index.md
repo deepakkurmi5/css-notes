@@ -64,13 +64,13 @@ An ending offset of 100%.
 
 The animation-fill-mode property can have the following values:
 
-* none - Default value. Animation will not apply any styles to the element before or after it is executing
+- none - Default value. Animation will not apply any styles to the element before or after it is executing
 
-* forwards - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
+- forwards - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
 
-* backwards - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period
+- backwards - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period
 
-*  both - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions
+-  both - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions
 
 
 * animation-play-state - *The animation-play-state CSS property sets whether an animation is running or paused.*
@@ -86,14 +86,19 @@ The animation-timeline CSS property specifies the timeline that is used to contr
 
 **Values**
 
-* scroll() -  default value is -  scroll(block & nearest)
+- scroll() -  default value is -  scroll(block & nearest)
 
 ex:- scroll(block) , scroll(y) ,  scroll(inline), scroll(x), scroll(nearest)
 
-* view() - 
+- view() - 
 
 ex:- view(top-offset, bottom-offset) 
 
-* auto
+- auto
+
+
+* animation-range - The animation-range CSS shorthand property is used to set the start and end of an animation's attachment range along its timeline, i.e. where along the timeline an animation will start and end.
+
 
 <!-- * animation-composition -->
+
