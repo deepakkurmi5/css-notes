@@ -185,8 +185,16 @@ Layout Rule
   display: grid;
 }
 
+.grid-two--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .grid-three--cols {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four--cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* ======================================
@@ -238,6 +246,37 @@ Module Rule
 
 .badge-lite-green {
   background-color: var(--green-light);
+}
+
+.section-hash {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 1.4rem;
+
+  & svg {
+    position: absolute;
+    left: -40px;
+    height: 2.2rem;
+    width: auto;
+    display: none;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+  }
+
+  & .section-hash--subheading {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.4rem;
+  }
+
+  & .section-hash--subheading:hover + svg {
+    display: block;
+  }
 }
 
 @media (width <= 768px) {
@@ -374,6 +413,26 @@ Hero Section
     height: auto;
   }
 }
+@media (width <= 768px) {
+  .hero-section {
+    & .btn-group {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (width <= 600px) {
+  .hero-section {
+    & > .container {
+      width: 100%;
+    }
+  }
+}
+
+/* ======================================
+Announcing Subsetting Section
+====================================== */
 
 .announcing-subsetting {
   background-color: var(--bg-main);
@@ -508,6 +567,41 @@ Hero Section
   }
 }
 
+.subsetting-info-section {
+  & .container {
+    padding: 0rem 13rem 5rem;
+  }
+
+  & .subsetting-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    & img {
+      height: 2rem;
+      width: 2rem;
+      object-fit: contain;
+    }
+
+    & span {
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration-line: underline;
+      -moz-text-decoration-line: underline;
+      transition: all 0.3s linear;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+
+      &:hover {
+        color: var(--sky-blue-light);
+      }
+    }
+  }
+}
+
 @media (width <= 1048px) {
   .announcing-subsetting {
     & .grid-three--cols {
@@ -520,13 +614,15 @@ Hero Section
   }
 }
 
-@media (width <= 768px) {
-  .hero-section {
-    & .btn-group {
-      width: 100%;
-      flex-direction: column;
+@media (width <= 992px) {
+  .subsetting-info-section {
+    & .container {
+      padding: 0rem 5rem 5rem;
     }
   }
+}
+
+@media (width <= 768px) {
   .announcing-subsetting {
     & .grid-three--cols {
       grid-template-columns: repeat(1, 1fr);
@@ -541,12 +637,103 @@ Hero Section
       }
     }
   }
+  .subsetting-info-section {
+    & .container {
+      padding: 0rem 2rem 4rem;
+    }
+
+    & .grid-four--cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    & .subsetting-info {
+      gap: 1rem;
+    }
+  }
 }
 
-@media (width <= 600px) {
-  .hero-section {
-    & > .container {
-      width: 100%;
+/* ======================================
+Services Section
+====================================== */
+
+.services-section {
+  & .container {
+    padding: 0 2rem 4rem;
+  }
+
+  & .grid {
+    gap: 3rem;
+  }
+
+  & .services-details {
+    margin-top: 10rem;
+
+    & .section-hash--subheading {
+      color: var(--yellow-bold);
+    }
+
+    & .services-details--heading {
+      padding: 3.5rem 0;
+    }
+
+    & .services-details--para {
+      font-size: 1.5rem;
+    }
+
+    & .services-form {
+      background-color: var(--bg-main);
+      padding: 2.8rem 3.2rem 4rem;
+      margin-top: 2.5rem;
+      border-radius: var(--border-radius-lg);
+      -webkit-border-radius: var(--border-radius-lg);
+      -moz-border-radius: var(--border-radius-lg);
+      -ms-border-radius: var(--border-radius-lg);
+      -o-border-radius: var(--border-radius-lg);
+
+      & form {
+        width: 100%;
+      }
+
+      & .btn-secondary img {
+        max-width: 2rem;
+        height: auto;
+      }
+
+      & .form-info {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+
+        & span {
+          font-size: 1.4rem;
+        }
+      }
+
+      & label {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      & input[type="text"] {
+        outline: none;
+        margin: 2rem 0;
+        width: 100%;
+        border: 1.5px solid var(--main-clr);
+        padding: 2rem 2.4rem;
+        font-size: 1.5rem;
+        background-color: var(--white-clr);
+        border-radius: var(--border-radius-lg);
+        -webkit-border-radius: var(--border-radius-lg);
+        -moz-border-radius: var(--border-radius-lg);
+        -ms-border-radius: var(--border-radius-lg);
+        -o-border-radius: var(--border-radius-lg);
+      }
+
+      & input::placeholder {
+        color: #d2d6dd;
+      }
     }
   }
 }
