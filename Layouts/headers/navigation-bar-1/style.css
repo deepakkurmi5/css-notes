@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  overflow: hidden;
+}
+
+:is(.hero-section, .service-section) {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.hero-section {
+  background-color: rgba(220, 163, 215, 0.2);
+}
+
+.service-section {
+  background-color: rgba(175, 185, 227, 0.2);
+}
+
+/* ======================================
+Header Css Start
+====================================== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  background-color: aliceblue;
+  padding: 0 3rem;
+}
+
+.header .brand-logo h3 {
+  background-color: black;
+  text-transform: uppercase;
+  color: white;
+  padding: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+}
+
+.header ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.header :is(.nav-link:link, .nav-link:visited) {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  color: rgb(55, 53, 53);
+  font-weight: 600;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+.header :is(.nav-link:hover, .nav-link:active) {
+  color: #364fc7;
+}
+
+.header .mobile-navbar-button {
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header .mobile-navbar-button .mobile-icon {
+  font-size: 3rem;
+  color: #212529;
+}
+
+.header .mobile-icon[name="close-outline"] {
+  display: none;
+}
+
+@media (width <= 700px) {
+  .header {
+    position: relative;
+  }
+
+  .header .navbar {
+    z-index: 900;
+    width: 300px;
+    height: 100vh;
+    background-color: #e7f5ff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    translate: 100%;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .header ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header .mobile-navbar-button {
+    display: block;
+    z-index: 999;
+  }
+
+  .active .navbar {
+    translate: 0%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .active .mobile-icon[name="close-outline"] {
+    display: block;
+  }
+  .active .mobile-icon[name="menu-outline"] {
+    display: none;
+  }
+}
