@@ -87,8 +87,8 @@ Theme Rule
   --sky-blue-light: #74c0fc;
   --sky-blue-dark: #146ebe;
   --gray-light: #c3c6d1;
+  --gray-dark: #616d8a;
   --orange-light: #ff8787;
-  --orange-dark: #ff8787;
   --orange-dark: #e03131;
 
   /* sizes */
@@ -265,6 +265,10 @@ Layout Rule
   padding: 0 2rem 5rem;
 }
 
+.discovery-section .container:last-child {
+  padding: 0rem 2rem 6rem;
+}
+
 .grid {
   display: grid;
 }
@@ -371,6 +375,30 @@ Module Rule
   background-color: var(--main-clr);
 }
 
+.icon-header-orange-light {
+  background-color: var(--orange-light);
+}
+
+.icon-header-orange-dark {
+  background-color: var(--orange-dark);
+}
+
+.icon-header-purpul-light {
+  background-color: var(--purpul-light);
+}
+
+.icon-header-purpul-dark {
+  background-color: var(--purpul-dark);
+}
+
+.icon-header-gray-light {
+  background-color: var(--gray-light);
+}
+
+.icon-header-gray-dark {
+  background-color: var(--gray-dark);
+}
+
 .card {
   border-radius: var(--border-radius-lg);
   -webkit-border-radius: var(--border-radius-lg);
@@ -389,6 +417,7 @@ Module Rule
 }
 
 .badge {
+  z-index: 100;
   font-size: 1.2rem;
   font-weight: 700;
   padding: 0.6rem 1.2rem;
@@ -399,17 +428,21 @@ Module Rule
   -webkit-border-radius: var(--border-radius-lg);
 }
 
-.badge-lite-main {
+.badge-light-main {
   background-color: var(--main-clr);
   color: var(--white-clr);
 }
 
-.badge-lite-purpul {
+.badge-light-purpul {
   background-color: var(--purpul-light);
 }
 
-.badge-lite-green {
+.badge-light-green {
   background-color: var(--green-light);
+}
+
+.badge-white {
+  background-color: var(--white-clr);
 }
 
 .section-hash {
@@ -466,16 +499,28 @@ State Rule
   background-color: var(--purpul-dark);
 }
 
-.card-yellow:hover {
-  box-shadow: 0 0.7rem 0 var(--yellow-dark);
-  border-inline: 0.2rem solid var(--yellow-dark);
-  border-top: 0.2rem solid var(--yellow-dark);
+.card-shadow-gray-light {
+  box-shadow: 0 0.4rem 0 var(--gray-light);
 }
 
-.card-pink:hover {
-  box-shadow: 0 0.7rem 0 var(--pink-dark);
-  border-inline: 0.2rem solid var(--pink-dark);
-  border-top: 0.2rem solid var(--pink-dark);
+.card-shadow-sky-blue-dark {
+  box-shadow: 0 0.4rem 0 var(--sky-blue-dark);
+}
+
+.card-shadow-purpul-dark {
+  box-shadow: 0 0.4rem 0 var(--purpul-dark);
+}
+
+.card-shadow-green-dark {
+  box-shadow: 0 0.4rem 0 var(--green-dark);
+}
+
+.card-shadow-orange-dark {
+  box-shadow: 0 0.4rem 0 var(--orange-dark);
+}
+
+.card-shadow-pink-dark {
+  box-shadow: 0 0.4rem 0 var(--pink-dark);
 }
 
 /* ======================================
@@ -1000,9 +1045,67 @@ Discovery Section Section
     justify-content: center;
   }
 
+  & .grid-five--cols {
+    grid-template-rows: minmax(130px, 1fr) repeat(2, minmax(300px, min-content));
+    gap: 3rem;
+  }
+
   & .container:last-child {
-    & .grid-five--cols {
-      grid-template-rows: 130px auto auto;
+    & .card {
+      position: relative;
+
+      & .badge {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        translate: -50% -50%;
+      }
+
+      & .card-header {
+        height: 62%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
+        padding: 2.8rem 3rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+        -webkit-border-radius: var(--border-radius-lg) var(--border-radius-lg) 0
+          0;
+        -moz-border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+        -ms-border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+        -o-border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+
+        & .icon-box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 2.5rem;
+
+          & img {
+            height: 2.5rem;
+            width: 2.5rem;
+            object-fit: contain;
+          }
+        }
+      }
+      & .card-footer {
+        height: 38%;
+        padding: 0 1.5rem 1rem;
+
+        & .card-footer--title {
+          text-transform: uppercase;
+          font-size: 1.6rem;
+          font-weight: 700;
+          letter-spacing: 4px;
+        }
+        & .card-para {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    & .card:last-child {
+      background-color: var(--gray-light);
     }
   }
 
@@ -1054,8 +1157,9 @@ Discovery Section Section
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem 2.4rem;
+      padding: 2rem 2rem;
       gap: 1.4rem;
+      width: 20rem;
       flex-basis: 20rem;
       text-align: center;
     }
